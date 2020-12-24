@@ -1,5 +1,5 @@
 .background-img::before {
-  background: url(/static/images/background.png) 0 0/100% no-repeat;
+  background: url(static/images/background.png) 0 0/100% no-repeat;
   display: block;
   content: "";
   position: absolute;
