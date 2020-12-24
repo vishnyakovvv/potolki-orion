@@ -3,42 +3,47 @@
 @import "./footer/footer";
 
 body {
+  font-family: "Gotham Pro", sans-serif;
   margin: 0;
 }
-
 img {
-  width: 100%;
   line-height: 0;
 }
-
 p {
   margin: 0;
 }
-
 a {
   text-decoration: none;
   cursor: pointer;
-  outline: none;
+  outline: 0;
 }
-
 html {
   box-sizing: border-box;
 }
-
 button {
   cursor: pointer;
-  outline: none;
+  outline: 0;
   border: none;
   padding: 0;
-  background: transparent;
+  background: 0 0;
 }
-
 .container {
-  width: 100%;
+  min-height: 100%;
   max-width: 1180px;
   margin: 0 auto;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding: 0 110px;
+
+  @include media_interval($media_tablet, $media_laptop-big) {
+    padding: 0 110px;
+  }
+
+  @include media_interval($media_mobile-medium, $media_tablet) {
+    padding: 0 60px;
+  }
+
+  @include media_interval(0, $media_mobile-medium) {
+    padding: 0 20px;
+  }
 }
 
 .visually-hidden {
@@ -48,16 +53,25 @@ button {
   height: 1px;
   margin: -1px;
 }
-
 .title-block {
-  margin: 0 0 20px 0;
-
-  &_one {
-    font-size: 30px;
-    text-transform: uppercase;
-  }
-  &_two {
-    font-size: 25px;
-    max-width: 500px;
-  }
+  margin: 0 0 20px;
+}
+.title-block_one {
+  font-size: 64px;
+  font-weight: 700;
+  color: #333;
+}
+.title-block_two {
+  font-size: 48px;
+  line-height: 46px;
+  font-weight: 700;
+  color: #333;
+}
+.button-main {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 23px;
+  color: #333;
+  padding: 30px 67px;
 }
