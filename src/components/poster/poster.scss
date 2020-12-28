@@ -1,0 +1,92 @@
+@import "./vars";
+@import "./colors";
+@import "./mixins";
+
+.poster {
+  height: 550px;
+  margin-bottom: 30px;
+
+  &__wrapper {
+    position: relative;
+    top: 72px;
+    display: flex;
+  }
+
+  &__title-block {
+    position: relative;
+    max-width: 650px;
+    margin-bottom: 35px;
+  }
+
+  &__title-text {
+    line-height: 77px;
+  }
+
+  &__title-price {
+    position: absolute;
+    top: 28px;
+    right: 55px;
+    display: flex;
+  }
+
+  &__title-cost {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 400;
+    width: 90px;
+    display: block;
+    margin-left: 25px;
+    margin-top: -3px;
+  }
+
+  &__sequence {
+    display: flex;
+    margin: 0 0 70px 5px;
+
+    &-block {
+      position: relative;
+      margin-right: 100px;
+    }
+
+    &-number {
+      position: absolute;
+      left: 10px;
+      top: 6px;
+      font-size: 18px;
+      font-weight: 300;
+      color: $c_white;
+
+      &--one {
+        left: 12px;
+      }
+    }
+
+    &-text {
+      font-size: 18px;
+      line-height: 18px;
+      color: $c_gray--dark-extra;
+      width: 100px;
+      margin-top: 21px;
+    }
+  }
+
+  &__button {
+    margin-left: 5px;
+
+    &-catalog {
+      margin-right: 35px;
+      color: $c_red-rose;
+    }
+
+    &-order {
+      background-color: $c_red-rose;
+      color: $c_white-2;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    bottom: -100px;
+    right: -40px;
+  }
+}
