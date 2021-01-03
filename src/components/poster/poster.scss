@@ -2,20 +2,32 @@
 @import "./colors";
 @import "./mixins";
 
+.poster::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  position: relative;
+  left: 0;
+  bottom: 80px;
+  border-top: 80px solid transparent;
+  border-right: 100vw solid white;
+}
+
 .poster {
-  height: 550px;
-  margin-bottom: 30px;
+  height: 605px;
+  margin-bottom: 56px;
 
   &__wrapper {
     position: relative;
-    top: 72px;
+    top: 34px;
     display: flex;
   }
 
   &__title-block {
     position: relative;
-    max-width: 650px;
-    margin-bottom: 35px;
+    max-width: 640px;
+    margin-bottom: 58px;
   }
 
   &__title-text {
@@ -24,9 +36,13 @@
 
   &__title-price {
     position: absolute;
-    top: 28px;
-    right: 55px;
+    top: 16px;
+    right: 56px;
     display: flex;
+  }
+
+  &__title-square {
+    margin-top: 4px;
   }
 
   &__title-cost {
@@ -35,13 +51,13 @@
     font-weight: 400;
     width: 90px;
     display: block;
-    margin-left: 25px;
+    margin-left: 13px;
     margin-top: -3px;
   }
 
   &__sequence {
     display: flex;
-    margin: 0 0 70px 5px;
+    margin: 0 0 47px 5px;
 
     &-block {
       position: relative;
@@ -50,14 +66,14 @@
 
     &-number {
       position: absolute;
-      left: 10px;
+      left: 13px;
       top: 6px;
-      font-size: 18px;
+      font-size: 24px;
       font-weight: 300;
       color: $c_white;
 
       &--one {
-        left: 12px;
+        left: 16px;
       }
     }
 
@@ -66,21 +82,26 @@
       line-height: 18px;
       color: $c_gray--dark-extra;
       width: 100px;
-      margin-top: 21px;
+      margin-top: 10px;
     }
   }
 
   &__button {
+    height: 100px;
+    display: flex;
+    align-items: center;
     margin-left: 5px;
 
     &-catalog {
       margin-right: 35px;
-      color: $c_red-rose;
+      color: $c_blue-3;
+      transition: background-color $tr_duration $tr_easing;
     }
 
     &-order {
-      background-color: $c_red-rose;
+      background-color: $c_blue-3;
       color: $c_white-2;
+      transition: background-color $tr_duration $tr_easing;
     }
   }
 
