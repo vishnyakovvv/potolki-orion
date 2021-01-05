@@ -56,8 +56,7 @@
       margin-left: 20px;
       transition: background-color $tr_duration $tr_easing;
 
-      &:hover,
-      &:focus {
+      &:hover {
         background-color: $c_gray-2;
       }
     }
