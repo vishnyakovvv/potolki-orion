@@ -1,0 +1,29 @@
+@import "./vars";
+@import "./colors";
+@import "./mixins";
+
+.promotion::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 0;
+  top: -1px;
+  border-top: 79px solid white;
+  border-right: 100vw solid $c_blue-3;
+}
+
+.promotion {
+  background-color: $c_blue-3;
+  padding-top: 103px;
+  position: relative;
+
+  &__title {
+    color: $c_white-2;
+  }
+  &__content {
+    display: flex;
+    align-items: flex-end;
+  }
+}

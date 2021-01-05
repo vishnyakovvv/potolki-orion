@@ -1,5 +1,7 @@
 .catalog {
   background-color: white;
+  margin-bottom: 60px;
+  overflow: hidden;
 
   &__top {
     display: flex;
@@ -46,6 +48,10 @@
       padding: 11px 29px;
       transition: $tr_duration $tr_easing;
 
+      &--active {
+        display: block;
+      }
+
       &:focus,
       &:hover {
         color: $c_white-2;
@@ -59,6 +65,7 @@
   &__content {
     display: flex;
     position: relative;
+    margin-bottom: 60px;
   }
 
   &__description {
@@ -66,10 +73,7 @@
 
     &-target {
       display: none;
-
-      &:target {
-        display: block;
-      }
+      animation: fadeEffect 0.6s;
     }
 
     &-title {
@@ -78,7 +82,7 @@
       font-size: 36px;
       line-height: 34px;
       color: $c_black-3;
-      margin: 8px 0 10px;
+      margin: 0 0 10px;
       height: 60px;
     }
 
@@ -89,16 +93,22 @@
       line-height: 17px;
       height: 185px;
       margin: 20px 0;
-
-      &:target {
-        display: block;
-      }
     }
 
     &-img {
       position: absolute;
       top: 16px;
       left: 20px;
+    }
+
+    &-price {
+      position: relative;
+      bottom: -69px;
+      left: 174px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 23px;
     }
 
     &-info {
@@ -113,5 +123,24 @@
         margin-left: 10px;
       }
     }
+
+    &-cost {
+      display: flex;
+      align-items: center;
+      margin-bottom: 27px;
+
+      &--TEXT {
+        font-size: 24px;
+        margin-right: 25px;
+      }
+    }
+  }
+}
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

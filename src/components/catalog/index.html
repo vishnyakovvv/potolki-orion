@@ -11,37 +11,39 @@
         </div>
 
         <div class="catalog__tabs">
-            <nav class="catalog__tabs-items">
-                <a href="#tab_01" class="catalog__tabs-item" active><span>Матовые</span></a>
-                <a href="#tab_02" class="catalog__tabs-item"><span>Фактурные</span></a>
-                <a href="#tab_03" class="catalog__tabs-item"><span>Двухуровневые</span></a>
-                <a href="#tab_04" class="catalog__tabs-item"><span>Глянцевие</span></a>
-                <a href="#tab_05" class="catalog__tabs-item"><span>АРТ-печать</span></a>
-                <a href="#tab_06" class="catalog__tabs-item"><span>Парящие</span></a>
-                <a href="#tab_07" class="catalog__tabs-item"><span>Сатиновые</span></a>
-                <a href="#tab_08" class="catalog__tabs-item"><span>Тканевые</span></a>
-                <a href="#tab_09" class="catalog__tabs-item"><span>APPLY 3D - резные</span></a>
-                <a href="#tab_10" class="catalog__tabs-item"><span>Световые линии</span></a>
-            </nav>
+            <ul class="catalog__tabs-items">
+                <li class="catalog__tabs-item active" onclick="openTab(event, 'tab_01')"><span>Матовые</span></li>
+                <li class="catalog__tabs-item" onclick="openTab(event, 'tab_02')"><span>Фактурные</span></li>
+                <li class="catalog__tabs-item" onclick="openTab(event, 'tab_03')"><span>Двухуровневые</span></li>
+                <li class="catalog__tabs-item" onclick="openTab(event, 'tab_04')"><span>Глянцевие</span></li>
+                <li class="catalog__tabs-item" onclick="openTab(event, 'tab_05')"><span>АРТ-печать</span></li>
+                <li class="catalog__tabs-item" onclick="openTab(event, 'tab_06')"><span>Парящие</span></li>
+                <li class="catalog__tabs-item" onclick="openTab(event, 'tab_07')"><span>Сатиновые</span></li>
+                <li class="catalog__tabs-item" onclick="openTab(event, 'tab_08')"><span>Тканевые</span></li>
+                <li class="catalog__tabs-item" onclick="openTab(event, 'tab_09')"><span>APPLY 3D - резные</span></li>
+                <li class="catalog__tabs-item" onclick="openTab(event, 'tab_10')"><span>Световые линии</span></li>
+            </ul>
         </div>
         <div class="catalog__content">
             <div class="catalog__photo">
                 <img src="/static/images/catalog_grid.png" alt="сетка">
             </div>
             <div class="catalog__description">
-                <div class="catalog__description-target" id="tab_01">
+                <div id="tab_01" class="catalog__description-target">
                     <h3 class="catalog__description-title">Матовые натяжные потолки</h3>
                     <p class="catalog__description-text">
                         Внешний вид матовых потолков напоминает классический белёный потолок. Поверхность матовой плёнки шероховатая. Шероховатости поглощают блики от освещения, поэтому поверхность потолка равномерно освещённая. Ассортимент насчитывает около 40 цветов и оттенков матовых потолков. Матовые плёнки самые популярные среди натяжных потолков.
                     </p>
                     <img class="catalog__description-img" src="/static/images/mat.png" alt="матовый потолок">
+                    <span class="catalog__description-price">от 199 р./м2</span>
                 </div>
-                <div class="catalog__description-target" id="tab_02">
+                <div id="tab_02" class="catalog__description-target">
                     <h3 class="catalog__description-title">Фактурные натяжные потолки</h3>
                     <p class="catalog__description-text">
                         Кроме классических натяжных потолков, таких как глянцевые матовые и сатиновые существуют плёнки с нанесённым узором на поверхности а так-же эксклюзивных цветов - металлик, перламутр и др. Толщина фактурных потолков значительно больше классических.
                     </p>
                     <img class="catalog__description-img" src="/static/images/facture.png" alt="фактурный потолок">
+                    <span class="catalog__description-price">от 390 р./м2</span>
                 </div>
                 <div class="catalog__description-target" id="tab_03">
                     <h3 class="catalog__description-title">Двухуровневые натяжные потолки</h3>
@@ -49,6 +51,7 @@
                         Двухуровневые натяжные потолки являются достаточно модным и эффектным интерьерным решением. С их помощью можно организовать оригинальное, нестандартное и необычное освещение, визуально зонировать пространство и скрыть его недостатки.
                     </p>
                     <img class="catalog__description-img" src="/static/images/2_x 1.png" alt="двухуровневый потолок">
+                    <span class="catalog__description-price">от 640 р./м2</span>
                 </div>
                 <div class="catalog__description-target" id="tab_04">
                     <h3 class="catalog__description-title">Глянцевие натяжные потолки</h3>
@@ -56,6 +59,7 @@
                         Их ещё называют лаковые за отражающую зеркальную поверхность. Светлый интерьер с таким потолком становится ещё светлее. А тёмные стены отражающиеся в таком потолке могут сделать комнату мрачной. Глянцевое полотно отлично смотрится в комбинации с матовым на одном потолке. В нашем ассортименте 100 оттенков глянцевых натяжных потолков.
                     </p>
                     <img class="catalog__description-img" src="/static/images/glyanec.png" alt="глянцевый потолок">
+                    <span class="catalog__description-price">от 249 р./м2</span>
                 </div>
                 <div class="catalog__description-target" id="tab_05">
                     <h3 class="catalog__description-title">АРТ-печать</h3>
@@ -63,6 +67,7 @@
                         Полотна с изображением на поверхности называются АРТ-печать. В отличии от фотопечати которая наносится на полотно по заказу, АРТ-печать это готовые полотна с изображением на всей его поверхности. Изображение на такие полотна наносится на заводе, а после поставляется на производство в рулонах с намоткой 50 метров. Самые популярные полотна с АРТ-печатью - облака и абстракция.
                     </p>
                     <img class="catalog__description-img" src="/static/images/art.png" alt="потолок с АРТ печатью">
+                    <span class="catalog__description-price">от 750 р./м2</span>
                 </div>
                 <div class="catalog__description-target" id="tab_06">
                     <h3 class="catalog__description-title">Парящие натяжные потолки</h3>
@@ -70,6 +75,7 @@
                         Парящими такие потолки называют за визуальный эффект - как-будто потолок ни к чему не закреплён и завис в воздухе. Такой эффект достигается благодаря конфигурации профиля, примыкание к стене которого можно увидеть только вплотную прижавшись к стене на которой он установлен. Это первый профиль разработанный для вклейки светодиодной ленты в натяжной потолок.
                     </p>
                     <img class="catalog__description-img" src="/static/images/paryayaschiy.png" alt="порящий потолок">
+                    <span class="catalog__description-price">от 699 р./м2</span>
                 </div>
                 <div class="catalog__description-target" id="tab_07">
                     <h3 class="catalog__description-title">Сатиновые натяжные потолки</h3>
@@ -77,6 +83,7 @@
                         Многие путают сатиновые натяжные потолки с тканевыми, хотя это абсолютно разные материалы. Сатиновые потолки это одна из разновидностей ПВХ плёнки. Они очень похожи визуально с матовыми, только их поверхность идеально гладкая. Благодаря гладкой поверхности на потолке более заметны блики от освещения. Ассортимент насчитывает менее 20 видов сатиновой плёнки.
                     </p>
                     <img class="catalog__description-img" src="/static/images/satin.png" alt="сатиновый потолок">
+                    <span class="catalog__description-price">от 219 р./м2</span>
                 </div>
                 <div class="catalog__description-target" id="tab_08">
                     <h3 class="catalog__description-title">Тканевые натяжные потолки</h3>
@@ -84,6 +91,7 @@
                         Морозостойкие, негорючие и абсолютно экологичные натяжные потолки. Тканевые полотна это текстиль со специальной пропиткой, которая защищает полотна от пролива и облегчает уход за ними. Тканевые полотна бывают разной степени пропитки, плотности и цветов. Установка таких потолков не требует нагрева полотна и помещения.
                     </p>
                     <img class="catalog__description-img" src="/static/images/tkan.png" alt="тканевый потолок">
+                    <span class="catalog__description-price">от 590 р./м2</span>
                 </div>
                 <div class="catalog__description-target" id="tab_09">
                     <h3 class="catalog__description-title">APPLY 3D - резные</h3>
@@ -91,6 +99,7 @@
                         APPLY – это технология, позволяющая создавать новые шедевры в декоре потолка. Инженеры нашей фирмы спроектировали и собрали уникальное оборудование, тщательно продумали технологический процесс, в результате которого вы можете получать простые и сложные вырезы в полотне.
                     </p>
                     <img class="catalog__description-img" src="/static/images/apply.png" alt="потолок apply">
+                    <span class="catalog__description-price">от 890 р./м2</span>
                 </div>
                 <div class="catalog__description-target" id="tab_10">
                     <h3 class="catalog__description-title">Световые линии</h3>
@@ -98,6 +107,7 @@
                         Вариант освещения в натяжном потолке представляющий собой светящиеся полосы разной формы и длины. Может служить основным освещением или дополнительно к люстре и спотам!
                     </p>
                     <img class="catalog__description-img" src="/static/images/lines.png" alt="световые линии">
+                    <span class="catalog__description-price">от 750 р./м2</span>
                 </div>
                 <div class="catalog__description-info">
                     <svg class="catalog__description-info--COLUMN" width="7" height="31" viewBox="0 0 7 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -105,6 +115,13 @@
                     </svg>
                     <p class="catalog__description-info--TEXT">Бесшовные до 550 см</p>
                 </div>
+                <div class="catalog__description-cost">
+                    <span class="catalog__description-cost--TEXT">Стоимость:</span>
+                    <svg class="catalog__description-cost--SVG" width="78" height="46" viewBox="0 0 78 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="78" height="46" rx="5" fill="#E0E0E0" />
+                    </svg>
+                </div>
+                <button class="poster__button-order button-main button">Заказать</button>
             </div>
         </div>
     </div>
