@@ -1,16 +1,19 @@
   // open tabs
 
-function openTab(evt, tabName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.querySelectorAll(".catalog__description-target");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.querySelector(".catalog__tabs-item");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " active";
-  console.log(tabcontent);
-} 
+
+let jsTriggers = document.querySelectorAll('.js-tab-trigger');
+
+jsTriggers.forEach(function(trigger) {
+   trigger.addEventListener('click', function () {
+      var id = this.getAttribute('data-tab'),
+          content = document.querySelector('.js-tab-content[data-tab="'+id+'"]'),
+          activeTrigger = document.querySelector('.js-tab-trigger.active'),
+          activeContent = document.querySelector('.js-tab-content.active');
+      
+      activeTrigger.classList.remove('active');
+      trigger.classList.add('active');
+      
+      activeContent.classList.remove('active');
+      content.classList.add('active');
+   });
+});

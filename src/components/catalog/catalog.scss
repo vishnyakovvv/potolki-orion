@@ -48,17 +48,26 @@
       padding: 11px 29px;
       transition: $tr_duration $tr_easing;
 
-      &--active {
-        display: block;
+      &:active,
+      &:hover {
+        color: $c_black-3;
+        background-color: $c_gray--light;
+        padding: 11px 29px;
+        border-radius: 5px;
       }
 
-      &:focus,
-      &:hover {
+      &:focus {
         color: $c_white-2;
         background-color: $c_black-3;
         padding: 11px 29px;
         border-radius: 5px;
       }
+    }
+    &-item.active {
+      color: $c_white-2;
+      background-color: $c_black-3;
+      padding: 11px 29px;
+      border-radius: 5px;
     }
   }
 
@@ -74,6 +83,9 @@
     &-target {
       display: none;
       animation: fadeEffect 0.6s;
+    }
+    &-target.active {
+      display: block;
     }
 
     &-title {
