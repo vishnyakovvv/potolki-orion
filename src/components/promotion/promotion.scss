@@ -10,42 +10,62 @@
   position: absolute;
   left: 0;
   top: -1px;
-  border-top: 79px solid white;
-  border-right: 100vw solid $c_blue-3;
+  border-top: 100px solid $c_white;
+  border-right: 100vw solid transparent;
+}
+
+.promotion:before {
+  background: linear-gradient(rgba($c_black-3, 0.5), rgba($c_black-3, 0.8)),
+    url(/static/images/big_bg_2.jpg);
+  background-color: #cccccc;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+  content: " ";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
 }
 
 .promotion {
-  background-color: $c_blue-3;
-  padding-top: 103px;
+  // background-color: $c_red;
+  padding: 165px 0 140px;
   position: relative;
 
   &__title {
     color: $c_white-2;
     width: 480px;
+    margin-bottom: 40px;
   }
 
   &__content {
     display: flex;
+    justify-content: space-between;
     align-items: flex-end;
-    max-width: 922px;
-    margin: 0 auto;
+    max-width: 1100px;
+    margin: 0 auto 60px;
   }
 
   &__block {
     position: relative;
-    margin-right: 20px;
+    margin-right: 7px;
+    transition: $tr_duration $tr_easing;
 
     &-title {
       font-style: normal;
-      font-weight: normal;
+      font-weight: 400;
       font-size: 18px;
       line-height: 17px;
       color: $c_white-2;
       max-width: 225px;
-      margin: 0 0 46px;
+      margin: 0 0 52px;
       position: relative;
       top: 5px;
-      left: 3px;
+      left: 18px;
 
       &--BOLD {
         font-weight: bold;
@@ -54,13 +74,35 @@
 
     &-svg {
       position: absolute;
-      left: 0px;
-      top: 0px;
+      left: 12px;
     }
 
     &-img {
       border-radius: 10px;
-      box-shadow: -8px 8px 0px 0px $c_blue-4;
+      box-shadow: -8px 8px 0px 0px $c_gray-2;
+      margin-left: 13px;
+      transition: $tr_duration $tr_easing;
+
+      &:hover {
+        position: relative;
+        transform: scale(1.1);
+        box-shadow: none;
+        box-shadow: none;
+      }
+    }
+
+    &-hover {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      opacity: 0;
+
+      // display: flex;
+      // width: 207px;
+      // height: 207px;
+      // z-index: 44;
     }
   }
 }

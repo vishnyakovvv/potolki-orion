@@ -1,0 +1,19 @@
+@import "./vars";
+@import "./colors";
+@import "./mixins";
+
+.work::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 0;
+  top: -99px;
+  border-top: 100px solid transparent;
+  border-right: 100vw solid $c_white;
+}
+
+.work {
+  position: relative;
+}

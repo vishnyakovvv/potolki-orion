@@ -9,8 +9,8 @@
   height: 0;
   position: relative;
   left: 0;
-  bottom: 80px;
-  border-top: 80px solid transparent;
+  bottom: 99px;
+  border-top: 100px solid transparent;
   border-right: 100vw solid white;
 }
 
@@ -31,6 +31,7 @@
   }
 
   &__title-text {
+    text-align: start;
     line-height: 77px;
   }
 
@@ -62,6 +63,7 @@
     &-block {
       position: relative;
       margin-right: 100px;
+      text-align: start;
     }
 
     &-number {
@@ -91,18 +93,6 @@
     display: flex;
     align-items: center;
     margin-left: 5px;
-
-    &-catalog {
-      margin-right: 35px;
-      color: $c_blue-3;
-      transition: background-color $tr_duration $tr_easing;
-    }
-
-    &-order {
-      background-color: $c_blue-3;
-      color: $c_white-2;
-      transition: background-color $tr_duration $tr_easing;
-    }
   }
 
   &__img {

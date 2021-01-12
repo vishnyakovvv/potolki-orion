@@ -1,0 +1,50 @@
+@import "./vars";
+@import "./colors";
+@import "./mixins";
+
+.advantages {
+  text-align: center;
+  color: $c_white-2;
+
+  &-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 34px;
+    margin: 54px 0;
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 20px;
+    width: 100%;
+  }
+
+  &-block {
+    max-width: 520px;
+    position: relative;
+    text-align: left;
+
+    margin: 0 70px 60px 0;
+  }
+
+  &-svg {
+    position: absolute;
+    top: 2px;
+  }
+  &-heading {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 17px;
+    margin: 0 0 18px 15px;
+  }
+
+  &-text {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 17px;
+  }
+}
