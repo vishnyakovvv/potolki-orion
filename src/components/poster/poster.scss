@@ -1,6 +1,6 @@
-@import "./vars";
-@import "./colors";
-@import "./mixins";
+@import "../vars";
+@import "../colors";
+@import "../mixins";
 
 .poster::after {
   content: "";
@@ -11,7 +11,7 @@
   left: 0;
   bottom: 99px;
   border-top: 100px solid transparent;
-  border-right: 100vw solid white;
+  border-right: 100vw solid $c_white;
 }
 
 .poster {

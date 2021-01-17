@@ -2,9 +2,14 @@
 @import "./colors";
 @import "./mixins";
 
+// * {
+//   outline: 1px solid red;
+// }
 body {
   font-family: "Gotham Pro", sans-serif;
   margin: 0;
+  // max-width: 100%;
+  overflow-x: hidden;
 }
 img {
   line-height: 0;
@@ -65,7 +70,7 @@ button {
   &_one {
     font-size: 64px;
     font-weight: 700;
-    color: #333;
+    color: $c_black-3;
     margin: 0;
   }
 
@@ -73,13 +78,19 @@ button {
     font-size: 48px;
     line-height: 46px;
     font-weight: 700;
-    color: #333;
+    color: $c_black-3;
     margin: 0;
   }
 }
 
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
 .button {
-  transition: 0.2s ease-in-out;
+  transition: all 0.2s linear 0s;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   &:active {
@@ -99,10 +110,6 @@ button {
     background-color: $c_red;
     color: $c_white-2;
     transition: opacity $tr_duration $tr_easing;
-
-    &:hover {
-      opacity: 0.6;
-    }
   }
 
   &-catalog {

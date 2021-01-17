@@ -17,17 +17,17 @@
   }
 
   &__link {
-    color: #333;
+    color: $c_black-3;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 13px;
     margin: 0 20px;
-    transition: 0.4s ease-in-out;
+    transition: $tr_duration $tr_easing;
 
     &:hover,
     &:focus {
-      color: #828282;
+      color: $c_gray-2;
     }
   }
 
@@ -37,7 +37,7 @@
     height: 55px;
 
     &-tel {
-      color: #333;
+      color: $c_black-3;
       font-style: normal;
       font-weight: 500;
       font-size: 14px;
@@ -49,8 +49,8 @@
       font-weight: 500;
       font-size: 14px;
       line-height: 13px;
-      color: #f2f2f2;
-      background-color: #4f4f4f;
+      color: $c_white-2;
+      background-color: $c_gray--dark-extra;
       box-sizing: border-box;
       border-radius: 5px;
       padding: 12px 33px;
@@ -59,6 +59,9 @@
 
       &:hover {
         background-color: $c_gray-2;
+      }
+      &:active {
+        background-color: $c_gray--dark-extra;
       }
     }
   }
