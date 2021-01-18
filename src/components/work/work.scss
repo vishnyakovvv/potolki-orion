@@ -14,13 +14,36 @@
   border-right: 100vw solid $c_white;
 }
 
+.work:before {
+  background: url(/static/images/hammer-drill.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  content: " ";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  opacity: 0.1;
+  z-index: -1;
+}
+
 .work {
   position: relative;
-  padding: 84px 0;
+  padding: 40px 0;
+
+  &__top {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 70px;
+
+    &-text {
+      width: 160px;
+    }
+  }
 
   &__title {
-    margin-bottom: 70px;
-    width: 200px;
+    width: 400px;
   }
 
   &__top-block {
@@ -55,7 +78,7 @@
   margin: auto;
   overflow: hidden;
 }
-p {
+.is-item--text {
   line-height: 1.2;
 }
 
@@ -100,12 +123,20 @@ figure {
     width: 60%;
   }
   &--title {
-    letter-spacing: 6px;
     color: #343434;
     margin: 0;
     font-size: 2em;
   }
+  &--item {
+    margin-left: 16px;
+    list-style-type: square;
+    transform: translateY(0px);
+    transition-delay: 500ms;
+  }
   &--description {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 28px;
     font-weight: bold;
   }
 }
@@ -125,7 +156,7 @@ figure {
 hr {
   margin: 0.5em 0em;
   height: 4px;
-  background: #eee;
+  background: $c_gray;
   border: none;
 }
 
@@ -140,7 +171,9 @@ hr {
 }
 
 .is-item--inner {
-  p {
+  .is-item--text,
+  .is-item--description,
+  ul {
     transform: translateY(15px);
     position: relative;
     opacity: 0;
@@ -148,7 +181,7 @@ hr {
   }
 }
 
-h1 {
+.is-item--title {
   overflow: hidden;
   span {
     transform: translateY(100%);
@@ -187,14 +220,16 @@ small {
     }
 
     .is-item--inner {
-      p {
+      .is-item--text,
+      .is-item--description,
+      span,
+      ul {
         transform: translateY(0px);
         transition-delay: 500ms;
         position: relative;
         opacity: 1;
 
         &:nth-of-type(2) {
-          color: $c_red;
           transition-delay: 700ms;
         }
         &:nth-of-type(3) {
@@ -203,7 +238,7 @@ small {
       }
     }
 
-    h1 {
+    .is-item--title {
       overflow: hidden;
       span {
         transform: translateY(0%);

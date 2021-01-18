@@ -1,0 +1,88 @@
+@import "../vars";
+@import "../colors";
+@import "../mixins";
+
+.review {
+  padding: 0 0 40px;
+
+  &__title {
+    margin-bottom: 83px;
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__block {
+    width: 33.3%;
+    background-color: $c_gray--light;
+    border-radius: 10px;
+    padding: 20px 35px 80px;
+    position: relative;
+
+    &-top {
+      display: flex;
+    }
+
+    &-img {
+      margin-right: 35px;
+    }
+
+    &-svg {
+      position: absolute;
+      left: 180px;
+      top: 40px;
+    }
+
+    &-wrapper {
+      z-index: 1;
+      height: 90px;
+      margin-top: 28px;
+      width: 100px;
+      &--NAME {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 13px;
+        margin-bottom: 17px;
+      }
+      &--DATE {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 11px;
+        margin-bottom: 7px;
+      }
+      &--ITEM {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 10px;
+        line-height: 10px;
+        margin-bottom: 7px;
+      }
+      &--VARIETY {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 11px;
+      }
+    }
+
+    &-bottom {
+      margin-top: 70px;
+      &--SVG {
+        margin-bottom: 11px;
+      }
+      &--TEXT {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+
+    &-two {
+      margin: 0 20px;
+    }
+  }
+}

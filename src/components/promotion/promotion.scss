@@ -1,6 +1,6 @@
-@import "./vars";
-@import "./colors";
-@import "./mixins";
+@import "../vars";
+@import "../colors";
+@import "../mixins";
 
 .promotion::after {
   content: "";
@@ -32,7 +32,7 @@
 }
 
 .promotion {
-  padding: 165px 0 140px;
+  padding: 140px 0 140px;
   position: relative;
 
   &__title {
