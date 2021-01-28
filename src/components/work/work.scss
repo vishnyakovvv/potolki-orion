@@ -2,35 +2,35 @@
 @import "../colors";
 @import "../mixins";
 
-.work::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  position: absolute;
-  left: 0;
-  top: -99px;
-  border-top: 100px solid transparent;
-  border-right: 100vw solid $c_white;
-}
-
-.work:before {
-  background: url(/static/images/hammer-drill.png);
-  background-position: right;
-  background-repeat: no-repeat;
-  content: " ";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  top: 0;
-  opacity: 0.1;
-  z-index: -1;
-}
-
 .work {
   position: relative;
   padding: 40px 0 60px;
+
+  &::before {
+    background: url(/static/images/hammer-drill.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    content: " ";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    opacity: 0.1;
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: -48px;
+    border-top: 50px solid transparent;
+    border-right: 100vw solid $c_white;
+  }
 
   &__top {
     display: flex;
@@ -135,7 +135,6 @@ figure {
   }
   &--description {
     display: block;
-    margin-bottom: 5px;
     font-size: 28px;
     font-weight: bold;
   }
@@ -153,7 +152,7 @@ figure {
   padding: 0em 3em;
 }
 
-hr {
+.is-item--hr {
   margin: 0.5em 0em;
   height: 4px;
   background: $c_gray;
@@ -191,7 +190,7 @@ hr {
   }
 }
 
-hr {
+.is-item--hr {
   width: 0;
   max-width: 8em;
   transition: all 2500ms ease;
@@ -248,7 +247,7 @@ small {
       }
     }
 
-    hr {
+    .is-item--hr {
       width: 100%;
       max-width: 8em;
       transition-delay: 500ms;

@@ -27,13 +27,9 @@
     // options
     imagesLoaded: true,
     wrapAround: true,
-    autoPlay: false,
+    autoPlay: true,
     pauseAutoPlayOnHover: false
   });
 
   // paralax
   
-  var image = document.getElementsByClassName('thumbnail');
-new simpleParallax(imageLeft, {
-  orientation: 'left'
-});

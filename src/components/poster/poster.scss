@@ -2,21 +2,21 @@
 @import "../colors";
 @import "../mixins";
 
-.poster::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  position: relative;
-  left: 0;
-  bottom: 99px;
-  border-top: 100px solid transparent;
-  border-right: 100vw solid $c_white;
-}
-
 .poster {
   height: 605px;
   margin-bottom: 40px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: relative;
+    left: 0;
+    bottom: 49px;
+    border-top: 50px solid transparent;
+    border-right: 100vw solid $c_white;
+  }
 
   &__wrapper {
     position: relative;

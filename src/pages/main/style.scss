@@ -1,36 +1,25 @@
-// .background-img::before {
-//   background: url(/static/images/background.png) 0 0/100% auto no-repeat;
-
-//   display: block;
-//   content: "";
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   opacity: 0.1;
-//   z-index: -1;
-// }
 .background-img {
   animation: bgFadeIn 1s ease-in both;
   position: relative;
   text-align: center;
+
+  &::after {
+    background: url(/static/images/background.png);
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    content: " ";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    opacity: 0.2;
+  }
 }
-.background-img::after {
-  background: url(/static/images/background.png);
-  background-attachment: fixed;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  bottom: 0;
-  content: " ";
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: -1;
-  opacity: 0.2;
-}
+
 @keyframes bgFadeIn {
   0% {
     background-color: white;

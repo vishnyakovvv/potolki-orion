@@ -2,38 +2,38 @@
 @import "../colors";
 @import "../mixins";
 
-.promotion::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  position: absolute;
-  left: 0;
-  top: -1px;
-  border-top: 100px solid $c_white;
-  border-right: 100vw solid transparent;
-}
-
-.promotion:before {
-  background: linear-gradient(rgba($c_black-3, 0.5), rgba($c_black-3, 0.8)),
-    url(/static/images/big_bg_2.jpg);
-  background-color: #cccccc;
-  background-attachment: fixed;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  bottom: 0;
-  content: " ";
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: -1;
-}
-
 .promotion {
   padding: 140px 0 140px;
   position: relative;
+
+  &::before {
+    background: linear-gradient(rgba($c_black-3, 0.5), rgba($c_black-3, 0.8)),
+      url(/static/images/big_bg_2.jpg);
+    background-color: #cccccc;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    content: " ";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: -1px;
+    border-top: 50px solid $c_white;
+    border-right: 100vw solid transparent;
+  }
 
   &__title {
     color: $c_white-2;

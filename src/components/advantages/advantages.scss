@@ -2,23 +2,23 @@
 @import "../colors";
 @import "../mixins";
 
-.advantages:before {
-  background: url(/static/images/measure.png);
-  background-position: right;
-  background-repeat: no-repeat;
-  content: " ";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  top: 0;
-  opacity: 0.1;
-  z-index: -1;
-}
-
 .advantages {
   position: relative;
   padding: 40px 0;
+
+  &::before {
+    background: url(/static/images/measure.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    content: " ";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 100px;
+    opacity: 0.1;
+    z-index: -1;
+  }
 
   &-title {
     width: 530px;
@@ -36,6 +36,8 @@
 
   &-img {
     margin-bottom: 85px;
+    box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.45);
+    border-radius: 10px;
   }
 
   &-svg {

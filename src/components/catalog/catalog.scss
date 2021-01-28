@@ -2,23 +2,23 @@
 @import "../colors";
 @import "../mixins";
 
-.catalog:before {
-  background: url(/static/images/hammer-clip-art-26.png);
-  background-position: right;
-  background-repeat: no-repeat;
-  content: " ";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  top: 0;
-  opacity: 0.1;
-  z-index: -1;
-}
-
 .catalog {
   overflow: hidden;
   position: relative;
+
+  &::before {
+    background: url(/static/images/hammer-clip-art-26.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    content: " ";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    opacity: 0.1;
+    z-index: -1;
+  }
 
   &__top {
     display: flex;
