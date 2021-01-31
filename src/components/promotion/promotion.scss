@@ -3,7 +3,7 @@
 @import "../mixins";
 
 .promotion {
-  padding: 140px 0 140px;
+  padding: 60px 0;
   position: relative;
 
   &::before {
@@ -23,18 +23,6 @@
     z-index: -1;
   }
 
-  &::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    position: absolute;
-    left: 0;
-    top: -1px;
-    border-top: 50px solid $c_white;
-    border-right: 100vw solid transparent;
-  }
-
   &__title {
     color: $c_white-2;
     width: 480px;
@@ -46,7 +34,7 @@
     justify-content: space-between;
     align-items: flex-end;
     max-width: 1100px;
-    margin: 0 auto 60px;
+    margin: 0 auto;
   }
 
   &__block {
@@ -97,11 +85,6 @@
       transform: translate(-50%, -50%);
 
       opacity: 0;
-
-      // display: flex;
-      // width: 207px;
-      // height: 207px;
-      // z-index: 44;
     }
   }
 }

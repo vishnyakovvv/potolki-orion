@@ -5,6 +5,7 @@
 .catalog {
   overflow: hidden;
   position: relative;
+  padding: 0 0 60px;
 
   &::before {
     background: url(/static/images/hammer-clip-art-26.png);
@@ -70,49 +71,52 @@
         color: $c_black-3;
         background-color: $c_gray--light;
         padding: 11px 29px;
-        border-radius: 5px;
+        border-radius: 2px;
       }
 
       &:focus {
         color: $c_white-2;
         background-color: $c_black-3;
         padding: 11px 29px;
-        border-radius: 5px;
+        border-radius: 2px;
       }
     }
     &-item.active {
       color: $c_white-2;
       background-color: $c_black-3;
       padding: 11px 29px;
-      border-radius: 5px;
+      border-radius: 2px;
     }
   }
 
   &__content {
     display: flex;
     position: relative;
-    margin-bottom: 60px;
   }
 
   &__description {
-    margin-left: 103px;
+    margin-left: 0;
+    position: relative;
 
     &-target {
       display: none;
-      animation: fadeEffect 0.6s;
+      animation: fadeEffect 0.3s;
     }
     &-target.active {
       display: block;
     }
 
+    &-box {
+      display: flex;
+    }
+
     &-title {
       font-style: normal;
-      font-weight: bold;
+      font-weight: 500;
       font-size: 36px;
       line-height: 34px;
       color: $c_black-3;
       margin: 0 0 10px;
-      height: 60px;
     }
 
     &-text {
@@ -120,28 +124,41 @@
       font-weight: 300;
       font-size: 18px;
       line-height: 17px;
-      height: 185px;
       margin: 20px 0;
     }
 
     &-img {
-      position: absolute;
-      top: 16px;
-      left: 20px;
+      margin-right: 60px;
+      box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.45);
+    }
+
+    &-inner {
+      position: relative;
     }
 
     &-price {
-      position: relative;
-      bottom: -69px;
+      position: absolute;
+      bottom: 105px;
       left: 150px;
       font-style: normal;
-      font-weight: bold;
+      font-weight: 700;
       font-size: 24px;
       line-height: 23px;
+      z-index: 1;
     }
 
     &-info {
       display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: absolute;
+      left: 741px;
+      bottom: 0;
+
+      &--TOP {
+        display: flex;
+        margin-bottom: 10px;
+      }
 
       &--TEXT {
         font-style: normal;
@@ -157,11 +174,15 @@
       display: flex;
       align-items: center;
       margin-bottom: 27px;
+      animation: fadeEffect 0.5s;
 
       &--TEXT {
         font-size: 24px;
         margin-right: 25px;
       }
+    }
+    &-button {
+      height: 75px;
     }
   }
 }

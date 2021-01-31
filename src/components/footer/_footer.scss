@@ -38,6 +38,11 @@
 
     &-item {
       margin: 0 10px;
+      transition: opacity $tr_duration $tr_easing;
+
+      &:hover {
+        opacity: 0.5;
+      }
     }
   }
 }

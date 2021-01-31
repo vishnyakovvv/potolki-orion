@@ -1,6 +1,6 @@
   // open tabs
 
-  (function () {
+  (function tabs () {
     let jsTriggers = document.querySelectorAll('.js-tab-trigger');
   
     jsTriggers.forEach(function(trigger) {
@@ -21,15 +21,19 @@
   
   
   // slider
+
+  (function slider () {
+    var elem = document.querySelector('.slide--parent');
+    var slideEl = new Flickity( elem, {
+      // options
+      imagesLoaded: true,
+      wrapAround: true,
+      autoPlay: true,
+      pauseAutoPlayOnHover: false
+    });
+  })();
   
-  var elem = document.querySelector('.slide--parent');
-  var slideEl = new Flickity( elem, {
-    // options
-    imagesLoaded: true,
-    wrapAround: true,
-    autoPlay: true,
-    pauseAutoPlayOnHover: false
-  });
+
 
   // paralax
   

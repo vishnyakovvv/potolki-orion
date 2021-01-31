@@ -82,17 +82,17 @@ input::placeholder {
   margin: 0 0 20px;
 
   &_one {
-    font-size: 64px;
-    font-weight: 700;
-    color: $c_black-3;
+    font-size: 50px;
+    font-weight: 500;
+    color: $c_gray--dark-extra;
     margin: 0;
   }
 
   &_two {
-    font-size: 48px;
+    font-size: 42px;
     line-height: 46px;
-    font-weight: 700;
-    color: $c_black-3;
+    font-weight: 500;
+    color: $c_gray--dark-extra;
     margin: 0;
   }
 }
@@ -110,7 +110,7 @@ h3 {
   font-weight: 700;
   font-size: 25px;
   padding: 20px 70px;
-  border-radius: 10px;
+  border-radius: 2px;
 
   &:active {
     box-shadow: none;

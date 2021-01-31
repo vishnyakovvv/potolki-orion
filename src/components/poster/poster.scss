@@ -3,36 +3,21 @@
 @import "../mixins";
 
 .poster {
-  height: 605px;
-  margin-bottom: 40px;
-
-  &::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    position: relative;
-    left: 0;
-    bottom: 49px;
-    border-top: 50px solid transparent;
-    border-right: 100vw solid $c_white;
-  }
-
   &__wrapper {
     position: relative;
-    top: 34px;
+    top: 0;
     display: flex;
   }
 
   &__title-block {
     position: relative;
     max-width: 640px;
-    margin-bottom: 58px;
+    margin-bottom: 30px;
   }
 
   &__title-text {
     text-align: start;
-    line-height: 77px;
+    line-height: 61px;
   }
 
   &__title-price {
@@ -58,7 +43,7 @@
 
   &__sequence {
     display: flex;
-    margin: 0 0 47px 5px;
+    margin: 0 0 20px 5px;
 
     &-block {
       position: relative;
@@ -92,7 +77,7 @@
     height: 100px;
     display: flex;
     align-items: center;
-    margin-left: 5px;
+    margin: 0 0 40px 5px;
   }
 
   &__img {

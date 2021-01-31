@@ -3,7 +3,7 @@
 @import "../mixins";
 
 .contacts {
-  padding: 20px 0;
+  padding: 0 0 40px;
 
   &__wrapper {
     display: flex;
@@ -61,6 +61,11 @@
       line-height: 33px;
       color: $c_black;
       margin-left: 10px;
+      transition: opacity $tr_duration $tr_easing;
+
+      &:hover {
+        opacity: 0.5;
+      }
 
       &--NAME {
         display: block;
