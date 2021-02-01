@@ -3,6 +3,7 @@
   animation: 1s ease-in both bgFadeIn;
   position: relative;
   text-align: center;
+  height: 100vh;
 }
 .background-img::after {
   background: url(images/IMG_2995.JPG) center center/cover no-repeat fixed;
