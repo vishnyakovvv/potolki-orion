@@ -3,7 +3,7 @@
 @import "../mixins";
 
 .contacts {
-  padding: 0 0 40px;
+  padding: 0 0 60px;
 
   &__wrapper {
     display: flex;
@@ -12,78 +12,85 @@
 
   &__inner {
     position: relative;
+    width: 100%;
+
+    &-box {
+      display: flex;
+      max-width: 460px;
+
+      &--VL {
+        border-left: 3px solid #999999;
+        height: 505px;
+        margin-right: 17px;
+      }
+    }
+
+    &-text {
+      margin-top: 15px;
+
+      &--ADDRESS {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 33px;
+        margin-bottom: 15px;
+      }
+
+      &--PHONE {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 36px;
+        color: $c_black;
+      }
+
+      &--TIMETABLE {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 13px;
+      }
+    }
+
+    &-icon {
+      display: flex;
+      align-items: center;
+      margin: 15px 0 20px;
+      transition: all $tr_duration $tr_easing;
+      color: $c_black;
+
+      &:hover {
+        color: #999999;
+      }
+
+      &--IMG {
+        background: url(/static/images/icon_1.svg) center no-repeat;
+        width: 50px;
+        height: 50px;
+        transition: $tr_duration $tr_easing;
+        &:hover {
+          background: url(/static/images/icon_2.svg) center no-repeat;
+        }
+      }
+
+      &--TEXT {
+        font-weight: 500;
+        margin-left: 20px;
+        width: 250px;
+      }
+    }
   }
 
   &__title {
-    margin-bottom: 7px;
-  }
-
-  &__address {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 33px;
-    margin-bottom: 15px;
-  }
-
-  &__phone {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 36px;
-    color: $c_black;
-  }
-
-  &__text {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 13px;
-  }
-
-  &__social {
-    display: flex;
-    align-items: center;
-    margin-top: 15px;
-
-    &-text {
-      font-style: normal;
-      font-weight: 400;
-      font-size: 22px;
-      line-height: 33px;
-    }
-
-    &-link {
-      display: flex;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 22px;
-      line-height: 33px;
-      color: $c_black;
-      margin-left: 10px;
-      transition: opacity $tr_duration $tr_easing;
-
-      &:hover {
-        opacity: 0.5;
-      }
-
-      &--NAME {
-        display: block;
-        align-self: center;
-        font-weight: 500;
-      }
-    }
-
-    &-img {
-      display: block;
-      margin-left: 10px;
-    }
+    margin-bottom: 20px;
   }
 
   &__map {
     position: absolute;
-    bottom: 0;
-    border-radius: 10px;
+    bottom: 15px;
+    left: 20px;
+    border-radius: 1px;
+    border: none;
     box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.45);
   }
 
@@ -92,7 +99,7 @@
     flex-direction: column;
     padding: 45px 35px 25px;
     background-color: $c_white-2;
-    border-radius: 10px;
+    border-radius: 1px;
     color: $c_black-3;
     box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.45);
 

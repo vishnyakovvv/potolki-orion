@@ -22,6 +22,7 @@
 
   &__title {
     margin-bottom: 40px;
+    width: 400px;
   }
 
   &__wrapper {
@@ -33,7 +34,6 @@
   &__block {
     width: 33.3%;
     background-color: $c_gray--light;
-    border-radius: 10px;
     padding: 35px 35px 40px;
     position: relative;
     box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.45);
@@ -55,7 +55,7 @@
     &-wrapper {
       z-index: 1;
       height: 90px;
-      margin-top: 28px;
+      margin-top: 5px;
       width: 100px;
       &--NAME {
         font-style: normal;
@@ -87,7 +87,7 @@
     }
 
     &-bottom {
-      margin-top: 70px;
+      margin-top: 20px;
       &--SVG {
         margin-bottom: 11px;
       }
