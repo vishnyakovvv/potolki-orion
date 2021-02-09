@@ -902,6 +902,9 @@ small:after {
   display: flex;
   flex-direction: column;
 }
+.showroom__feedback-content {
+  margin-bottom: 30px;
+}
 .showroom__feedback-title {
   color: #fff8dc;
   font-size: 36px;
