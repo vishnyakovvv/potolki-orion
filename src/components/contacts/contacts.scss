@@ -16,16 +16,16 @@
 
     &-box {
       display: flex;
-      max-width: 460px;
+      width: 100%;
 
       &--VL {
         border-left: 3px solid #999999;
-        height: 505px;
         margin-right: 17px;
       }
     }
 
     &-text {
+      width: 90%;
       margin-top: 15px;
 
       &--ADDRESS {
@@ -38,7 +38,7 @@
 
       &--PHONE {
         font-style: normal;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 24px;
         line-height: 36px;
         color: $c_black;
@@ -57,10 +57,10 @@
       align-items: center;
       margin: 15px 0 20px;
       transition: all $tr_duration $tr_easing;
-      color: $c_black;
+      color: $c_gray--dark-extra;
 
       &:hover {
-        color: #999999;
+        color: $c_black;
       }
 
       &--IMG {
@@ -86,12 +86,11 @@
   }
 
   &__map {
-    position: absolute;
-    bottom: 15px;
-    left: 20px;
+    width: 100%;
     border-radius: 1px;
     border: none;
     box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.45);
+    margin-bottom: 15px;
   }
 
   &__form {
@@ -111,7 +110,7 @@
 
     &-title {
       font-style: normal;
-      font-weight: 700;
+      font-weight: 500;
       font-size: 36px;
       line-height: 34px;
       width: 190px;
@@ -137,7 +136,7 @@
 
     &-text {
       font-style: normal;
-      font-weight: 700;
+      font-weight: 500;
       font-size: 24px;
       line-height: 23px;
       margin-bottom: 30px;

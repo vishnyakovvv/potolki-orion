@@ -84,7 +84,7 @@ input::placeholder {
   &_one {
     font-size: 50px;
     font-weight: 500;
-    color: $c_gray--dark-extra;
+    color: $c_black-3;
     margin: 0;
   }
 
@@ -92,7 +92,7 @@ input::placeholder {
     font-size: 42px;
     line-height: 46px;
     font-weight: 400;
-    color: $c_gray--dark-extra;
+    color: $c_black-3;
     margin: 0;
   }
 }
@@ -114,10 +114,11 @@ h3 {
 
   &:active {
     box-shadow: none;
-    margin-top: 4px;
+    margin-top: 3px;
   }
   &-main {
     border: 3px solid $c_red;
+    color: $c_red;
     transition: background-color $tr_duration $tr_easing;
 
     &:hover {
@@ -132,13 +133,9 @@ h3 {
     transition: background-color $tr_duration $tr_easing;
 
     &:hover {
-      background-color: rgba(238, 61, 72, 0.4);
+      background-color: #dd0808;
+      border: 3px solid #dd0808;
     }
-  }
-
-  &-catalog {
-    margin-right: 35px;
-    color: $c_red;
   }
 
   &-form {
@@ -157,7 +154,7 @@ h3 {
     transition: background-color $tr_duration $tr_easing;
 
     &:hover {
-      background-color: $c_gray-2;
+      background-color: $c_black-3;
     }
     &:active {
       background-color: $c_gray--dark-extra;

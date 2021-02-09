@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
   <link href="common.css" rel="stylesheet" />
   <link href="style.css" rel="stylesheet" />
+  <link href="/static/dist/css/lightbox.css" rel="stylesheet" />
   <link rel="stylesheet" href="/static/fonts/GothamPro/stylesheet.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet">
@@ -18,23 +19,27 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-
   <title>Натяжные потолки в Самаре от 70 руб.М/2</title>
 </head>
 
 <body>
-  <div class="background-img">
+  <section class="background-img">
+    <h2 class="background-img__title visually-hidden">постер</h2>
     @@include('header/index.html')
     @@include('poster/index.html')
-  </div>
-  @@include('box-info/index.html')
-  @@include('catalog/index.html')
-  @@include('promotion/index.html')
-  @@include('work/index.html')
-  @@include('review/index.html')
-  @@include('advantages/index.html')
-  @@include('contacts/index.html')
+  </section>
+  <main class="main">
+    @@include('box-info/index.html')
+    @@include('catalog/index.html')
+    @@include('promotion/index.html')
+    @@include('work/index.html')
+    @@include('showroom/index.html')
+    @@include('design/index.html')
+    @@include('contacts/index.html')
+  </main>
   @@include('footer/index.html')
+  @@include('callback/index.html')
+  <script src="/static/dist/js/lightbox-plus-jquery.js"></script>
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <script src="index.js"></script>
 </body>

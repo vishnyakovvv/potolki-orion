@@ -21,9 +21,9 @@
   }
 
   &__link {
-    color: $c_black-3;
+    color: $c_gray--dark-extra;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
     line-height: 30px;
     margin: 0 30px 0 15px;
@@ -31,7 +31,21 @@
 
     &:hover,
     &:focus {
-      color: $c_gray-2;
+      color: $c_black;
+    }
+    &::after {
+      display: block;
+      content: "";
+      height: 2px;
+      margin-top: -5px;
+      width: 0%;
+      background-color: $c_black;
+      transition: width 0.2s ease-in-out;
+    }
+
+    &:hover:after,
+    &:focus:after {
+      width: 100%;
     }
   }
 
