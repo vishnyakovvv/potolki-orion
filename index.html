@@ -13,7 +13,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="static/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon-16x16.png">
-    <link rel="manifest" href="/static/images/site.webmanifest">
+    <link rel="manifest" href="static/images/site.webmanifest">
     <link rel="mask-icon" href="static/images/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
@@ -46,7 +46,12 @@
                     </nav>
                     <div class="header__contact">
                         <p class="header__contact-tel">+7 937 992 52 15</p>
-                        <a class="button-mini button" href="tel:+79379925215">Связаться</a>
+                        <div class="button">
+                            <button class="button_mini" href="tel:+79379925215" type="link">
+
+                                <span class="button_mini-name">Связаться</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -88,8 +93,16 @@
                             </div>
                         </div>
                         <div class="poster__button">
-                            <button class="button-catalog button-main poster__button-catalog button">Каталог</button>
-                            <button class="button-order  button">Заказать</button>
+                            <div class="button poster__button-catalog">
+                                <button class="button_transparent">
+                                    <span class="button_transparent-name">Каталог</span>
+                                </button>
+                            </div>
+                            <div class="button">
+                                <button class="button_background callback-open_js">
+                                    <span class="button_background-name">Заказать</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -116,7 +129,12 @@
                         </div>
                     </div>
                     <div class="box-info__img">
-                        <img class="box-info__img-wrapper" src="static/images/box-info.jpg" alt="фото натяжного потолка">
+                        <picture class="box-info__picture">
+                            <!-- <source srcset="static/images/portfolio-1.png, static/images/portfolio-1_retina.png 2x" media="(min-width: 1024px)">
+                    <source srcset="static/images/portfolio-1_tablet.png" media="(min-width: 768px) and (max-width: 1023px)">
+                    <source srcset="static/images/portfolio-1_mobile.png" media="(max-width: 767px)">  -->
+                            <img class="box-info__img-wrapper" src="static/images/box-info-1.jpg" alt="фото натяжного потолка">
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -297,7 +315,11 @@
                                 <span class="catalog__description-cost--TEXT">Стоимость:</span>
                             </div>
                             <div class="catalog__description-button">
-                                <button class="button-order button-main button">Заказать</button>
+                                <div class="button">
+                                    <button class="button_background">
+                                        <span class="button_background-name">Заказать</span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -319,7 +341,11 @@
                                 <div class="promotion__block-hover">
                                     <p class="promotion__block-hover--TITLE">ЗАКАЗАТЬ ОДИН ПОТОЛОК</p>
                                     <div class="promotion__block-hover--BUTTON">
-                                        <button class="button-mini button">Заказать</button>
+                                        <div class="button">
+                                            <button class="button_mini">
+                                                <span class="button_mini-name">Связаться</span>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -334,7 +360,11 @@
                                 <div class="promotion__block-hover">
                                     <p class="promotion__block-hover--TITLE">ЗАКАЗАТЬ ДВА ПОТОЛКА</p>
                                     <div class="promotion__block-hover--BUTTON">
-                                        <button class="button-mini button">Заказать</button>
+                                        <div class="button">
+                                            <button class="button_mini">
+                                                <span class="button_mini-name">Связаться</span>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -349,7 +379,11 @@
                                 <div class="promotion__block-hover">
                                     <p class="promotion__block-hover--TITLE">ЗАКАЗАТЬ ПО АКЦИИ!</p>
                                     <div class="promotion__block-hover--BUTTON">
-                                        <button class="button-mini button">Заказать</button>
+                                        <div class="button">
+                                            <button class="button_mini">
+                                                <span class="button_mini-name">Связаться</span>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -477,7 +511,9 @@
                                     </label>
                                     <hr class="showroom__form-hr">
                                     <div class="showroom__form-btn">
-                                        <button class="showroom__form-button  button-main button" type="submit">Посетить шоурум</button>
+                                        <button class="button showroom__form-button button_transparent" type="submit">
+                                            <span class="showroom__form-button-NAME button_transparent-name">Посетить шоурум</span>
+                                        </button>
                                     </div>
                                 </form>
                             </div>
@@ -485,57 +521,75 @@
                     </div>
                     <div class="showroom__gallery">
                         <div class="showroom__gallery-block showroom__gallery-block--ONE" data-lightbox="roadtrip">
-                            <img class="showroom__gallery-img" src="static/images/showroom_1.jpg" alt="">
-                            <div class="showroom__gallery-hover">
-                                <img class="showroom__gallery-hover--IMG" src="static/images/search.svg" alt="иконка для увеличения объекта">
+                            <div class="showroom__gallery-block--WRAP">
+                                <img class="showroom__gallery-img" src="static/images/showroom_1.jpg" alt="">
+                                <div class="showroom__gallery-hover">
+                                    <img class="showroom__gallery-hover--IMG" src="static/images/search.svg" alt="иконка для увеличения объекта">
+                                </div>
                             </div>
                         </div>
                         <div class="showroom__gallery-block showroom__gallery-block--TWO" data-lightbox="gallery">
-                            <img class="showroom__gallery-img" src="static/images/showroom_2.jpg" alt="">
-                            <div class="showroom__gallery-hover">
-                                <img class="showroom__gallery-hover--IMG" src="static/images/search.svg" alt="иконка для увеличения объекта">
+                            <div class="showroom__gallery-block--WRAP">
+                                <img class="showroom__gallery-img" src="static/images/showroom_2.jpg" alt="">
+                                <div class="showroom__gallery-hover">
+                                    <img class="showroom__gallery-hover--IMG" src="static/images/search.svg" alt="иконка для увеличения объекта">
+                                </div>
                             </div>
                         </div>
                         <div class="showroom__gallery-block showroom__gallery-block--THREE" data-lightbox="gallery">
-                            <img class="showroom__gallery-img" src="static/images/showroom_3.jpg" alt="">
-                            <div class="showroom__gallery-hover">
-                                <img class="showroom__gallery-hover--IMG" src="static/images/search.svg" alt="иконка для увеличения объекта">
+                            <div class="showroom__gallery-block--WRAP">
+                                <img class="showroom__gallery-img" src="static/images/showroom_3.jpg" alt="">
+                                <div class="showroom__gallery-hover">
+                                    <img class="showroom__gallery-hover--IMG" src="static/images/search.svg" alt="иконка для увеличения объекта">
+                                </div>
                             </div>
                         </div>
                         <div class="showroom__gallery-block showroom__gallery-block--FOUR" data-lightbox="gallery">
-                            <img class="showroom__gallery-img" src="static/images/showroom_4.jpg" alt="">
-                            <div class="showroom__gallery-hover">
-                                <img class="showroom__gallery-hover--IMG" src="static/images/search.svg" alt="иконка для увеличения объекта">
+                            <div class="showroom__gallery-block--WRAP">
+                                <img class="showroom__gallery-img" src="static/images/showroom_4.jpg" alt="">
+                                <div class="showroom__gallery-hover">
+                                    <img class="showroom__gallery-hover--IMG" src="static/images/search.svg" alt="иконка для увеличения объекта">
+                                </div>
                             </div>
                         </div>
                         <div class="showroom__gallery-block showroom__gallery-block--FIVE" data-lightbox="gallery">
-                            <img class="showroom__gallery-img" src="static/images/showroom_5.jpg" alt="">
-                            <div class="showroom__gallery-hover">
-                                <img class="showroom__gallery-hover--IMG" src="static/images/search.svg" alt="иконка для увеличения объекта">
+                            <div class="showroom__gallery-block--WRAP">
+                                <img class="showroom__gallery-img" src="static/images/showroom_5.jpg" alt="">
+                                <div class="showroom__gallery-hover">
+                                    <img class="showroom__gallery-hover--IMG" src="static/images/search.svg" alt="иконка для увеличения объекта">
+                                </div>
                             </div>
                         </div>
                         <div class="showroom__gallery-block showroom__gallery-block--SIX" data-lightbox="gallery">
-                            <img class="showroom__gallery-img" src="static/images/showroom_6.jpg" alt="">
-                            <div class="showroom__gallery-hover">
-                                <img class="showroom__gallery-hover--IMG" src="static/images/search.svg" alt="иконка для увеличения объекта">
+                            <div class="showroom__gallery-block--WRAP">
+                                <img class="showroom__gallery-img" src="static/images/showroom_6.jpg" alt="">
+                                <div class="showroom__gallery-hover">
+                                    <img class="showroom__gallery-hover--IMG" src="static/images/search.svg" alt="иконка для увеличения объекта">
+                                </div>
                             </div>
                         </div>
                         <div class="showroom__gallery-block showroom__gallery-block--SEVEN" data-lightbox="gallery">
-                            <img class="showroom__gallery-img" src="static/images/showroom_7.jpg" alt="">
-                            <div class="showroom__gallery-hover">
-                                <img class="showroom__gallery-hover--IMG" src="static/images/search.svg" alt="иконка для увеличения объекта">
+                            <div class="showroom__gallery-block--WRAP">
+                                <img class="showroom__gallery-img" src="static/images/showroom_7.jpg" alt="">
+                                <div class="showroom__gallery-hover">
+                                    <img class="showroom__gallery-hover--IMG" src="static/images/search.svg" alt="иконка для увеличения объекта">
+                                </div>
                             </div>
                         </div>
                         <div class="showroom__gallery-block showroom__gallery-block--EIGHT" data-lightbox="gallery">
-                            <img class="showroom__gallery-img" src="static/images/showroom_8.jpg" alt="">
-                            <div class="showroom__gallery-hover">
-                                <img class="showroom__gallery-hover--IMG" src="static/images/search.svg" alt="иконка для увеличения объекта">
+                            <div class="showroom__gallery-block--WRAP">
+                                <img class="showroom__gallery-img" src="static/images/showroom_8.jpg" alt="">
+                                <div class="showroom__gallery-hover">
+                                    <img class="showroom__gallery-hover--IMG" src="static/images/search.svg" alt="иконка для увеличения объекта">
+                                </div>
                             </div>
                         </div>
                         <div class="showroom__gallery-block showroom__gallery-block--NINE" data-lightbox="gallery">
-                            <img class="showroom__gallery-img" src="static/images/showroom_9.jpg" alt="">
-                            <div class="showroom__gallery-hover">
-                                <img class="showroom__gallery-hover--IMG" src="static/images/search.svg" alt="иконка для увеличения объекта">
+                            <div class="showroom__gallery-block--WRAP">
+                                <img class="showroom__gallery-img" src="static/images/showroom_9.jpg" alt="">
+                                <div class="showroom__gallery-hover">
+                                    <img class="showroom__gallery-hover--IMG" src="static/images/search.svg" alt="иконка для увеличения объекта">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -552,7 +606,11 @@
                         </label>
                         <hr class="design__form-hr">
                         <div class="design__form-btn">
-                            <button class="design__form-button  button-main button" type="submit">Заказать</button>
+
+                            <button class="button design__form-button button_transparent" type="submit">
+                                <span class="design__form-button--NAME button_transparent-name">Заказать</span>
+                            </button>
+
                         </div>
                     </form>
                     <div class="design__content">
@@ -600,7 +658,11 @@
                         </label>
                         <hr class="contacts__form-hr">
                         <div class="contacts__form-bottom">
-                            <button class="contacts__form-button button-order button" type="submit">Заказать</button>
+                            <div class="button">
+                                <button class="button_background">
+                                    <span class="button_background-name">Заказать</span>
+                                </button>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -654,7 +716,7 @@
             </div>
             <label class="callback__form-lable">
                 <span class="callback__form-text">Ваше имя</span>
-                <input class="callback__form-input" type="text" name="name" placeholder="Иван" autocomplete="off">
+                <input class="callback__form-input input-text-callback_js" type="text" name="name" placeholder="Иван" autocomplete="off">
             </label>
             <hr class="callback__form-hr">
             <label class="callback__form-phone-input callback__form-lable">
@@ -663,7 +725,12 @@
             </label>
             <hr class="callback__form-hr">
             <div class="callback__form-bottom">
-                <button class="callback__form-button button-order button" type="submit">Заказать</button>
+                <div class="button">
+                    <button class="button_background">
+                        <span class="button_background-name">Заказать</span>
+                    </button>
+                </div>
+                <button class="callback__form-close callback-close_js" type="button" aria-label="exit"></button>
             </div>
         </form>
     </section>

@@ -1,7 +1,6 @@
 body {
   font-family: "Gotham Pro", sans-serif;
   margin: 0;
-  overflow-x: hidden;
 }
 img {
   line-height: 0;
@@ -107,53 +106,64 @@ h3 {
   margin: 0;
 }
 .button {
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 25px;
-  padding: 20px 70px;
+  position: relative;
   border-radius: 2px;
 }
 .button:active {
   box-shadow: none;
   margin-top: 3px;
 }
-.button-main {
-  border: 3px solid #ee3d48;
+.button_transparent {
+  padding: 17px 70px;
+  background: 0 0;
+  border: 2px solid #ee3d48;
+  border-radius: 2px;
+  transition: background-color 0.4s ease-in-out;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.button_transparent:hover {
+  background-color: rgba(250, 250, 250, 0.5);
+}
+.button_transparent-name {
   color: #ee3d48;
-  transition: background-color 0.4s ease-in-out;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21px;
+  background: 0 0;
 }
-.button-main:hover {
-  background-color: rgba(250, 250, 250, 0.4);
-}
-.button-order {
+.button_background {
+  padding: 19px 70px;
   background-color: #ee3d48;
-  border: 3px solid #ee3d48;
-  color: #f2f2f2;
   transition: background-color 0.4s ease-in-out;
+  border-radius: 2px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
-.button-order:hover {
-  background-color: #dd0808;
-  border: 3px solid #dd0808;
+.button_background:hover {
+  background-color: #a40000;
 }
-.button-form {
-  background-color: #f2f2f2;
+.button_background-name {
+  color: #f2f2f2;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21px;
 }
-.button-mini {
+.button_mini {
+  width: 140px;
+  height: 38px;
+  border-radius: 2px;
+  background-color: #4f4f4f;
+  transition: background-color 0.4s ease-in-out;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.button_mini:hover {
+  background-color: #000;
+}
+.button_mini-name {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 13px;
   color: #f2f2f2;
-  background-color: #4f4f4f;
-  padding: 12px 33px;
-  transition: background-color 0.4s ease-in-out;
-}
-.button-mini:hover {
-  background-color: #333;
-}
-.button-mini:active {
-  background-color: #4f4f4f;
 }
 .header {
   padding: 50px 0 30px;
@@ -494,6 +504,7 @@ h3 {
 }
 .catalog__description-button {
   height: 75px;
+  position: relative;
 }
 @-webkit-keyframes fadeEffect {
   from {
@@ -560,6 +571,7 @@ h3 {
   font-weight: 700;
 }
 .promotion__block-card {
+  position: relative;
   transition: 0.4s ease-in-out;
   display: flex;
   align-content: center;
@@ -902,9 +914,6 @@ small:after {
   display: flex;
   flex-direction: column;
 }
-.showroom__feedback-content {
-  margin-bottom: 30px;
-}
 .showroom__feedback-title {
   color: #fff8dc;
   font-size: 36px;
@@ -974,7 +983,11 @@ small:after {
   border: 3px solid #f2f2f2;
   color: #f2f2f2;
 }
+.showroom__form-button-NAME {
+  color: #f2f2f2;
+}
 .showroom__gallery {
+  width: 100%;
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(4, 1fr);
@@ -982,13 +995,16 @@ small:after {
   grid-template-columns: auto;
 }
 .showroom__gallery-block {
-  width: 100%;
+  overflow: hidden;
   position: relative;
+}
+.showroom__gallery-block--WRAP {
+  width: 100%;
   transition: 0.4s ease-in-out;
   cursor: pointer;
 }
-.showroom__gallery-block:hover {
-  transform: scale(1.02);
+.showroom__gallery-block--WRAP:hover {
+  transform: scale(1.05);
 }
 .showroom__gallery-block--ONE {
   grid-column-start: 1;
@@ -1139,6 +1155,8 @@ small:after {
 }
 .design__form-button {
   border: 3px solid #f2f2f2;
+}
+.design__form-button--NAME {
   color: #f2f2f2;
 }
 .design__content {
@@ -1352,7 +1370,7 @@ small:after {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 111;
 }
 .callback__form {
@@ -1366,7 +1384,6 @@ small:after {
   background-color: #f2f2f2;
   border-radius: 1px;
   color: #333;
-  filter: blur(2px);
 }
 .callback__form-top {
   display: flex;
@@ -1424,6 +1441,27 @@ small:after {
   align-self: center;
   height: 75px;
   margin-top: 50px;
+}
+.callback__form-close {
+  position: absolute;
+  top: -3px;
+  right: -33px;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  border: none;
+  background: url(static/images/close_grey.svg);
+  transition: 0.4s ease-in-out;
+}
+@media (max-width: 1023px) {
+  .callback__form-close {
+    top: -30px;
+    right: 0;
+  }
+}
+.callback__form-close:active,
+.callback__form-close:hover {
+  background: url(static/images/close_black.svg);
 }
 .callback {
   display: none;
