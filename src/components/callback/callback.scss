@@ -9,7 +9,7 @@
   left: 0;
   right: 0;
 
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.6);
 
   z-index: 111;
 
@@ -24,8 +24,6 @@
     background-color: $c_white-2;
     border-radius: 1px;
     color: $c_black-3;
-    filter: blur(2px);
-    // box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.45);
 
     &-top {
       display: flex;
@@ -91,6 +89,32 @@
       align-self: center;
       height: 75px;
       margin-top: 50px;
+    }
+
+    &-close {
+      position: absolute;
+      top: -3px;
+      right: -33px;
+      cursor: pointer;
+
+      width: 25px;
+      height: 25px;
+
+      border: none;
+
+      background: url(/static/images/close_grey.svg);
+
+      transition: $tr_duration $tr_easing;
+
+      @include media_interval(0, $media_tablet) {
+        top: -30px;
+        right: 0;
+      }
+
+      &:hover,
+      &:active {
+        background: url(/static/images/close_black.svg);
+      }
     }
   }
 }

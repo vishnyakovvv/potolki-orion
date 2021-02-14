@@ -9,7 +9,7 @@
         </div>
         <label class="callback__form-lable">
             <span class="callback__form-text">Ваше имя</span>
-            <input class="callback__form-input" type="text" name="name" placeholder="Иван" autocomplete="off">
+            <input class="callback__form-input input-text-callback_js" type="text" name="name" placeholder="Иван" autocomplete="off">
         </label>
         <hr class="callback__form-hr">
         <label class="callback__form-phone-input callback__form-lable">
@@ -18,7 +18,12 @@
         </label>
         <hr class="callback__form-hr">
         <div class="callback__form-bottom">
-            <button class="callback__form-button button-order button" type="submit">Заказать</button>
+            <div class="button">
+                <button class="button_background">
+                    <span class="button_background-name">Заказать</span>
+                </button>
+            </div>
+            <button class="callback__form-close callback-close_js" type="button" aria-label="exit"></button>
         </div>
     </form>
 </section>

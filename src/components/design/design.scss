@@ -78,7 +78,10 @@
 
   &__form-button {
     border: 3px solid $c_white-2;
-    color: $c_white-2;
+
+    &--NAME {
+      color: $c_white-2;
+    }
   }
 
   &__content {

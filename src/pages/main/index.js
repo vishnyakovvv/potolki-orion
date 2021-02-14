@@ -35,5 +35,41 @@
   
 
 
-  // paralax
+  // window open
+
+  (function windowOpen() {
+    let callback = document.querySelector(".callback-modal_js"),
+        buttonOpen = document.querySelector(".callback-open_js"),
+        buttonClose = document.querySelector(".callback-close_js"),
+        inputText = document.querySelector(".input-text-callback_js");
+
+
+    buttonOpen.addEventListener("click", openCallbackPopup);
+
+    function openCallbackPopup() {
+
+
+        callback.classList.add("callback_open");
+        inputText.focus();
+
+        buttonClose.addEventListener("click", closeCallbackPopup);
+
+        window.addEventListener("keydown", function (event) {
+            if (event.code === "Escape") {
+                closeCallbackPopup()
+            }
+        });
+
+        callback.addEventListener("click", function (event) {
+            if (event.target === callback) {
+                closeCallbackPopup()
+            }
+        });
+    }
+
+    function closeCallbackPopup() {
+        callback.classList.remove("callback_open");
+        buttonClose.removeEventListener("click", closeCallbackPopup);
+    }
+})();
   
