@@ -57,14 +57,14 @@ input::placeholder {
   padding: 0 110px;
 
   @include media_interval($media_tablet, $media_laptop-big) {
-    padding: 0 50px;
-  }
-
-  @include media_interval($media_mobile-medium, $media_tablet) {
     padding: 0 60px;
   }
 
-  @include media_interval(0, $media_mobile-medium) {
+  @include media_interval($media_mobile, $media_tablet) {
+    padding: 0 40px;
+  }
+
+  @include media_interval(0, $media_mobile) {
     padding: 0 20px;
   }
 }
@@ -84,6 +84,10 @@ input::placeholder {
     font-weight: 500;
     color: $c_black-3;
     margin: 0;
+
+    @include media_interval($media_tablet, $media_laptop) {
+      font-size: 45px;
+    }
   }
 
   &_two {
@@ -122,6 +126,10 @@ h3 {
       background-color: rgba(250, 250, 250, 0.5);
     }
 
+    &:active {
+      box-shadow: none;
+    }
+
     &-name {
       color: $c_red;
       font-style: normal;
@@ -140,6 +148,10 @@ h3 {
 
     &:hover {
       background-color: $c_red-3;
+    }
+
+    &:active {
+      box-shadow: none;
     }
 
     &-name {
@@ -162,6 +174,10 @@ h3 {
       background-color: $c_black;
     }
 
+    &:active {
+      box-shadow: none;
+    }
+
     &-name {
       font-style: normal;
       font-weight: 500;
@@ -169,5 +185,79 @@ h3 {
       line-height: 13px;
       color: #f2f2f2;
     }
+  }
+}
+
+.burger-menu {
+  margin: 4px 0 0;
+
+  display: none;
+
+  @include media_interval(0, $media_tablet) {
+    display: block;
+  }
+
+  @include media_interval(0, $media_mobile) {
+    position: absolute;
+    right: 1px;
+    top: 85px;
+  }
+}
+
+.background-img {
+  height: 100vh;
+  animation: bgFadeIn 1s ease-in both;
+  position: relative;
+  text-align: center;
+
+  @include media_interval($media_2k, $media_4k-ultra) {
+    height: 700px;
+  }
+
+  @include media_interval(0, $media_tablet) {
+    height: 100%;
+  }
+
+  &::after {
+    background: url(/static/images/IMG_2995.JPG);
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    content: " ";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    opacity: 0.3;
+  }
+
+  @include media_interval(0, $media_tablet) {
+    &::after {
+      background: url(/static/images/IMG_2995-mobile.jpg);
+      background-attachment: fixed;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      bottom: 0;
+      content: " ";
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+      opacity: 0.3;
+    }
+  }
+}
+
+@keyframes bgFadeIn {
+  0% {
+    background-color: $c_white-2;
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0);
   }
 }

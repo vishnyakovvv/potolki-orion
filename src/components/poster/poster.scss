@@ -3,21 +3,55 @@
 @import "../mixins";
 
 .poster {
+  margin-top: 20px;
+
+  @include media_interval(0, $media_mobile) {
+    margin: 0;
+  }
+
   &__wrapper {
     position: relative;
     top: 0;
     display: flex;
   }
 
+  &__information {
+    width: 100%;
+  }
+
   &__title-block {
     position: relative;
     max-width: 640px;
     margin-bottom: 30px;
+
+    @include media_interval($media_tablet, $media_laptop) {
+      max-width: 585px;
+      margin-bottom: 20px;
+    }
+
+    @include media_interval(0, $media_mobile) {
+      margin-bottom: 20px;
+      width: 100%;
+    }
   }
 
   &__title-text {
     text-align: start;
     line-height: 61px;
+
+    @include media_interval(0, $media_mobile) {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    @include media_interval($media_mobile-extra-small, $media_mobile-small) {
+      font-size: 44px;
+      line-height: 52px;
+    }
+    @include media_interval(0, $media_mobile-extra-small) {
+      font-size: 36px;
+      line-height: 47px;
+    }
   }
 
   &__title-price {
@@ -25,6 +59,11 @@
     top: 16px;
     right: 56px;
     display: flex;
+
+    @include media_interval(0, $media_mobile) {
+      position: unset;
+      justify-content: center;
+    }
   }
 
   &__title-square {
@@ -44,12 +83,33 @@
 
   &__sequence {
     display: flex;
-    margin: 0 0 20px 5px;
+    margin: 0 0 20px;
+
+    @include media_interval($media_tablet, $media_laptop) {
+      margin: 0 0 10px 5px;
+    }
+
+    @include media_interval($media_mobile-extra-small, $media_mobile) {
+      justify-content: space-between;
+    }
+
+    @include media_interval(0, $media_mobile-extra-small) {
+      display: none;
+    }
 
     &-block {
       position: relative;
       margin-right: 100px;
       text-align: start;
+
+      @include media_interval($media_tablet, $media_laptop) {
+        margin-right: 90px;
+      }
+
+      @include media_interval(0, $media_mobile) {
+        margin: 0;
+        text-align: center;
+      }
     }
 
     &-number {
@@ -71,6 +131,10 @@
       color: $c_black-3;
       width: 100px;
       margin-top: 10px;
+
+      @include media_interval(0, $media_mobile) {
+        font-size: 15px;
+      }
     }
   }
 
@@ -80,8 +144,18 @@
     align-items: center;
     margin: 0 0 40px 5px;
 
+    @include media_interval(0, $media_mobile) {
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 0 0 80px 5px;
+    }
+
     &-catalog {
-      margin-right: 35px;
+      margin: 20px;
+
+      // @include media_interval(0, $media_mobile) {
+      //   margin: 0 0 20px;
+      // }
     }
   }
 
