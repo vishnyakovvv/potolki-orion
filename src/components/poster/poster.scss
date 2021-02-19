@@ -141,21 +141,21 @@
   &__button {
     height: 100px;
     display: flex;
-    align-items: center;
-    margin: 0 0 40px 5px;
+    align-items: start;
+    margin: 0 0 40px;
 
     @include media_interval(0, $media_mobile) {
-      justify-content: center;
+      justify-content: space-around;
       flex-wrap: wrap;
       margin: 0 0 80px 5px;
     }
 
     &-catalog {
-      margin: 20px;
+      margin: 0 20px 20px 0;
 
-      // @include media_interval(0, $media_mobile) {
-      //   margin: 0 0 20px;
-      // }
+      @include media_interval(0, $media_mobile) {
+        margin: 0 0 20px;
+      }
     }
   }
 
