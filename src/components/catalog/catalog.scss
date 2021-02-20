@@ -125,12 +125,25 @@
       font-weight: 300;
       font-size: 18px;
       line-height: 17px;
-      margin: 20px 0;
+      margin: 10px 0;
+
+      @include media_interval($media_tablet, $media_laptop) {
+        font-size: 16px;
+      }
     }
 
     &-img {
       margin-right: 60px;
       box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.45);
+
+      @include media_interval($media_laptop, $media_laptop-big) {
+        margin-right: 30px;
+      }
+
+      @include media_interval($media_tablet, $media_laptop) {
+        margin-right: 20px;
+        width: 520px;
+      }
     }
 
     &-inner {
@@ -139,7 +152,7 @@
 
     &-price {
       position: absolute;
-      bottom: 105px;
+      bottom: 92px;
       left: 150px;
       font-style: normal;
       font-weight: 700;
@@ -155,6 +168,14 @@
       position: absolute;
       left: 741px;
       bottom: 0;
+
+      @include media_interval($media_laptop, $media_laptop-big) {
+        left: 710px;
+      }
+
+      @include media_interval($media_tablet, $media_laptop) {
+        left: 540px;
+      }
 
       &--TOP {
         display: flex;
@@ -177,13 +198,17 @@
       margin-bottom: 27px;
       animation: fadeEffect 0.5s;
 
+      @include media_interval($media_tablet, $media_laptop) {
+        margin-bottom: 15px;
+      }
+
       &--TEXT {
         font-size: 24px;
         margin-right: 25px;
       }
     }
     &-button {
-      height: 75px;
+      height: 63px;
       position: relative;
     }
   }
