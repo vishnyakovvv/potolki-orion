@@ -51,10 +51,19 @@
     max-width: 900px;
     margin: 0 auto 16px;
 
+    @include media_interval(0, $media_tablet) {
+      margin: 0 auto 10px;
+      }
+
     &-items {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+
+      @include media_interval(0, $media_mobile) {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        }
     }
 
     &-item {
@@ -65,7 +74,12 @@
       color: $c_black-3;
       padding: 11px 29px;
       margin: 2px;
+      align-self: center;
       transition: $tr_duration $tr_easing;
+
+      @include media_interval(0, $media_mobile) {
+      padding: 8px 20px;
+        }
 
       &:active,
       &:hover {
@@ -73,6 +87,10 @@
         background-color: $c_gray--light;
         padding: 11px 29px;
         border-radius: 2px;
+
+        @include media_interval(0, $media_mobile) {
+          padding: 8px 20px;
+            }
       }
 
       &:focus {
@@ -80,6 +98,10 @@
         background-color: $c_black-3;
         padding: 11px 29px;
         border-radius: 2px;
+
+        @include media_interval(0, $media_mobile) {
+          padding: 8px 20px;
+            }
       }
     }
     &-item.active {
@@ -87,6 +109,10 @@
       background-color: $c_black-3;
       padding: 11px 29px;
       border-radius: 2px;
+
+      @include media_interval(0, $media_mobile) {
+        padding: 8px 20px;
+          }
     }
   }
 
@@ -96,8 +122,9 @@
   }
 
   &__description {
-    margin-left: 0;
     position: relative;
+    width: 100%;
+    margin-left: 0;
 
     &-target {
       display: none;
@@ -109,6 +136,10 @@
 
     &-box {
       display: flex;
+
+      @include media_interval(0, $media_tablet) {
+      flex-direction: column;
+      }
     }
 
     &-title {
@@ -118,6 +149,11 @@
       line-height: 34px;
       color: $c_black-3;
       margin: 0 0 10px;
+
+      @include media_interval($media_tablet, $media_laptop) {
+        font-size: 30px;
+        line-height: 26px;
+      }
     }
 
     &-text {
@@ -144,6 +180,9 @@
         margin-right: 20px;
         width: 520px;
       }
+      @include media_interval(0, $media_tablet) {
+        margin: 0 0 10px 0;
+        }
     }
 
     &-inner {
@@ -159,6 +198,14 @@
       font-size: 24px;
       line-height: 23px;
       z-index: 1;
+
+      @include media_interval($media_tablet, $media_laptop) {
+        bottom: 80px;
+      }
+
+      @include media_interval(0, $media_tablet) {
+bottom: -25px;
+          }
     }
 
     &-info {
@@ -177,9 +224,17 @@
         left: 540px;
       }
 
+      @include media_interval(0, $media_tablet) {
+        position: unset;
+          }
+
       &--TOP {
         display: flex;
         margin-bottom: 10px;
+
+        @include media_interval(0, $media_laptop) {
+display: none;
+        }
       }
 
       &--TEXT {
@@ -201,6 +256,10 @@
       @include media_interval($media_tablet, $media_laptop) {
         margin-bottom: 15px;
       }
+
+      @include media_interval(0, $media_tablet) {
+        margin-bottom: 15px;
+        }
 
       &--TEXT {
         font-size: 24px;
