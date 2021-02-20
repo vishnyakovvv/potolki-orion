@@ -5,7 +5,7 @@
 .catalog {
   overflow: hidden;
   position: relative;
-  padding: 0 0 60px;
+  padding: 60px 0 60px;
 
   &::before {
     background: url(/static/images/hammer-clip-art-26.png);
@@ -28,6 +28,10 @@
 
   &__title {
     margin-right: 69px;
+
+    @include media_interval(0, $media_mobile) {
+margin: 0 auto;
+            }
 
   }
 
@@ -192,6 +196,9 @@ display: none;
 
     &-inner {
       position: relative;
+      @include media_interval(0, $media_mobile) {
+        text-align: center;
+        }
     }
 
     &-price {
@@ -211,6 +218,9 @@ display: none;
       @include media_interval(0, $media_tablet) {
 bottom: -25px;
           }
+          @include media_interval(0, $media_mobile-extra-small) {
+            font-size: 20px;
+                      }
     }
 
     &-info {
@@ -274,6 +284,10 @@ display: none;
     &-button {
       height: 63px;
       position: relative;
+
+      @include media_interval(0, $media_mobile) {
+        margin: 0 auto;
+        }
     }
   }
 }
