@@ -28,10 +28,15 @@
 
   &__title {
     margin-right: 69px;
+
   }
 
   &__cost-wrapper {
     display: flex;
+
+    @include media_interval(0, $media_mobile) {
+display: none;
+      }
   }
 
   &__cost-square {
