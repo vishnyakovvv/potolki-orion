@@ -1,3 +1,6 @@
+* {
+  -webkit-tap-highlight-color: transparent;
+}
 body {
   font-family: "Gotham Pro", sans-serif;
   margin: 0;
@@ -220,7 +223,7 @@ h3 {
   text-align: center;
 }
 .background-img::after {
-  background: url(static/images/IMG_2995.JPG) center center/cover no-repeat
+  background: url(static/images/IMG_2995.jpg) center center/cover no-repeat
     fixed;
   bottom: 0;
   content: " ";
@@ -547,6 +550,15 @@ h3 {
     padding: 40px 0;
   }
 }
+.box-info__wrapper {
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .box-info__wrapper {
+    flex-direction: column;
+  }
+}
 @media (max-width: 767px) {
   .poster__button-catalog {
     margin: 0 0 20px;
@@ -554,10 +566,9 @@ h3 {
   .box-info {
     padding: 30px 0 0;
   }
-}
-.box-info__wrapper {
-  display: flex;
-  align-items: center;
+  .box-info__wrapper {
+    flex-direction: column-reverse;
+  }
 }
 .box-info__inner {
   margin-right: 10px;
@@ -586,8 +597,8 @@ h3 {
   max-width: 460px;
 }
 @media (max-width: 1023px) {
-  .box-info__wrapper {
-    flex-direction: column-reverse;
+  .box-info__title {
+    margin: 10px 0;
   }
   .box-info__inner-box {
     margin-bottom: 10px;
@@ -619,6 +630,11 @@ h3 {
 }
 .box-info__inner-text--TOP {
   margin: 10px 0;
+}
+@media (max-width: 1023px) {
+  .box-info__inner-text--TOP {
+    margin: 0 0 10px;
+  }
 }
 .box-info__inner-text--BOTTOM {
   margin-bottom: 10px;
