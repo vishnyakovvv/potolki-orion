@@ -587,7 +587,7 @@ h3 {
 }
 @media (max-width: 1023px) {
   .box-info__wrapper {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .box-info__inner-box {
     margin-bottom: 10px;
