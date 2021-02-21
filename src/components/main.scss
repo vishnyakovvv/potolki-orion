@@ -155,7 +155,7 @@ h3 {
   }
 
   &_background {
-    padding: 19px 70px;
+    padding: 19px 67px;
     background-color: $c_red;
     transition: background-color $tr_duration $tr_easing;
     border-radius: 2px;
@@ -204,8 +204,6 @@ h3 {
 }
 
 .burger-menu {
-  margin: 4px 0 0;
-
   display: none;
 
   @include media_interval(0, $media_tablet) {
@@ -225,16 +223,8 @@ h3 {
   position: relative;
   text-align: center;
 
-  @include media_interval($media_2k, $media_4k-ultra) {
-    height: 700px;
-  }
-
-  @include media_interval(0, $media_tablet) {
-    height: 100%;
-  }
-
   &::after {
-    background: url(/static/images/IMG_2995.JPG);
+    background: url(/static/images/IMG_2995.jpg);
     background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
@@ -249,10 +239,26 @@ h3 {
     opacity: 0.3;
   }
 
-  @include media_interval(0, $media_tablet) {
+  @include media_interval($media_mobile, $media_tablet) {
+    &::after {
+      background: url(/static/images/IMG_2995-tablet.jpg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      bottom: 0;
+      content: " ";
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+      opacity: 0.3;
+    }
+  }
+
+  @include media_interval(0, $media_mobile) {
     &::after {
       background: url(/static/images/IMG_2995-mobile.jpg);
-      background-attachment: fixed;
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;

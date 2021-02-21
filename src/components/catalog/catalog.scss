@@ -23,6 +23,10 @@
     top: 0;
     opacity: 0.1;
     z-index: -1;
+
+    @include media_interval(0, $media_tablet) {
+      background: none;
+    }
   }
 
   &__top {
