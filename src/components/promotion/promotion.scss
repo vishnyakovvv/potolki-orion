@@ -6,6 +6,14 @@
   padding: 60px 0;
   position: relative;
 
+  @include media_interval($media_mobile, $media_tablet) {
+    padding: 40px 0;
+  }
+
+  @include media_interval(0, $media_mobile) {
+    padding: 30px 0;
+  }
+
   &::before {
     background: linear-gradient(rgba($c_black-3, 0.5), rgba($c_black-3, 0.8)),
       url(/static/images/big_bg_2.jpg);
@@ -23,10 +31,24 @@
     z-index: -1;
   }
 
+  &__wrapper {
+    @include media_interval(0, $media_mobile) {
+      text-align: center;
+    }
+  }
+
   &__title {
     color: $c_white-2;
     width: 530px;
     margin-bottom: 40px;
+
+    @include media_interval($media_mobile, $media_tablet) {
+      margin-bottom: 20px;
+    }
+
+    @include media_interval(0, $media_mobile) {
+      width: auto;
+    }
   }
 
   &__content {
@@ -35,6 +57,11 @@
     align-items: flex-end;
     max-width: 1100px;
     margin: 0 auto;
+
+    @include media_interval(0, $media_mobile) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__block {
@@ -43,6 +70,10 @@
 
     &-litle {
       margin-right: 7px;
+
+      @include media_interval(0, $media_mobile) {
+        margin: 0 0 20px;
+      }
     }
 
     &-title {
@@ -56,6 +87,18 @@
       position: relative;
       top: 5px;
       left: 18px;
+
+      @include media_interval($media_mobile, $media_tablet) {
+        font-size: 15px;
+        margin: 0 0 40px;
+      }
+
+      @include media_interval(0, $media_mobile) {
+        max-width: 275px;
+        margin: 0 auto 12px;
+        top: 0;
+        left: 0;
+      }
 
       &--BOLD {
         font-weight: bold;
@@ -75,10 +118,18 @@
       }
     }
 
+    &-img {
+      width: 90%;
+
+      @include media_interval(0, $media_mobile-extra-small) {
+        width: 100%;
+      }
+    }
+
     &-hover {
       position: absolute;
       height: 100%;
-      width: 100%;
+      width: 90%;
       background-color: rgba(255, 255, 255, 0.7);
       opacity: 0;
       display: flex;
@@ -98,6 +149,10 @@
         line-height: 23px;
         margin-bottom: 50px;
         color: $c_gray--dark-extra;
+
+        @include media_interval($media_mobile, $media_tablet) {
+          font-size: 18px;
+        }
       }
 
       &--BUTTON {
@@ -108,7 +163,16 @@
 
     &-svg {
       position: absolute;
-      left: 12px;
+      left: 11px;
+
+      @include media_interval($media_mobile, $media_tablet) {
+        top: -7px;
+        width: 80px;
+      }
+
+      @include media_interval(0, $media_mobile) {
+        display: none;
+      }
     }
 
     &-img {
