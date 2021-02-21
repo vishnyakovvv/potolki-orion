@@ -233,7 +233,7 @@ h3 {
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .background-img::after {
-    background: url(static/images/IMG_2995-tablet.JPG) center center/cover
+    background: url(static/images/IMG_2995-tablet.jpg) center center/cover
       no-repeat;
     bottom: 0;
     content: " ";
@@ -280,7 +280,7 @@ h3 {
 }
 @media (max-width: 767px) {
   .background-img::after {
-    background: url(static/images/IMG_2995-mobile.JPG) center center/cover
+    background: url(static/images/IMG_2995-mobile.jpg) center center/cover
       no-repeat;
     bottom: 0;
     content: " ";
