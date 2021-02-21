@@ -2,9 +2,10 @@
 @import "./colors";
 @import "./mixins";
 
-// * {
-//   outline: 1px solid red;
-// }
+* {
+  // outline: 1px solid red;
+  -webkit-tap-highlight-color: transparent;
+}
 body {
   font-family: "Gotham Pro", sans-serif;
   margin: 0;

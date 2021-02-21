@@ -17,8 +17,12 @@
     display: flex;
     align-items: center;
 
-    @include media_interval(0, $media_tablet) {
+    @include media_interval($media_mobile, $media_tablet) {
       flex-direction: column;
+    }
+
+    @include media_interval(0, $media_mobile) {
+      flex-direction: column-reverse;
     }
   }
 
@@ -40,6 +44,10 @@
 
     @include media_interval($media_tablet, $media_laptop) {
       width: 380px;
+    }
+
+    @include media_interval(0, $media_tablet) {
+      margin: 10px 0;
     }
   }
 
@@ -78,6 +86,10 @@
 
     &--TOP {
       margin: 10px 0;
+
+      @include media_interval(0, $media_tablet) {
+        margin: 0 0 10px;
+      }
     }
 
     &--BOTTOM {
