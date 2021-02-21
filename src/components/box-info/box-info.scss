@@ -5,23 +5,64 @@
 .box-info {
   padding: 60px 0;
 
+  @include media_interval(0, $media_laptop) {
+    padding: 40px 0;
+  }
+
+  @include media_interval(0, $media_mobile) {
+    padding: 30px 0 0;
+  }
+
   &__wrapper {
     display: flex;
     align-items: center;
+
+    @include media_interval(0, $media_tablet) {
+      flex-direction: column;
+    }
+  }
+
+  &__inner {
+    margin-right: 10px;
+
+    @include media_interval(0, $media_mobile) {
+      margin: 0 auto;
+      text-align: center;
+    }
   }
 
   &__title {
-    max-width: 600px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+
+    @include media_interval($media_laptop, $media_laptop-big) {
+      width: 390px;
+    }
+
+    @include media_interval($media_tablet, $media_laptop) {
+      width: 380px;
+    }
   }
 
   &__inner-box {
     display: flex;
     max-width: 460px;
 
+    @include media_interval(0, $media_tablet) {
+      margin-bottom: 10px;
+    }
+
+    @include media_interval(0, $media_mobile) {
+      margin: 0 auto;
+      text-align: center;
+    }
+
     &--VL {
       border-left: 3px solid #999999;
       margin-right: 17px;
+
+      @include media_interval(0, $media_mobile) {
+        display: none;
+      }
     }
   }
 
@@ -31,8 +72,12 @@
     font-weight: normal;
     letter-spacing: 0.02em;
 
+    @include media_interval($media_laptop, $media_laptop-big) {
+      line-height: 18px;
+    }
+
     &--TOP {
-      margin: 15px 0;
+      margin: 10px 0;
     }
 
     &--BOTTOM {
@@ -43,8 +88,12 @@
   &__inner-idea {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     transition: color $tr_duration $tr_easing;
+
+    @include media_interval(0, $media_mobile) {
+      flex-direction: column-reverse;
+    }
 
     &:hover {
       color: #999999;
@@ -69,5 +118,9 @@
 
   &__img-wrapper {
     box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.45);
+
+    @include media_interval(0, $media_tablet) {
+      width: 100%;
+    }
   }
 }

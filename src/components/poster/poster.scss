@@ -3,10 +3,10 @@
 @import "../mixins";
 
 .poster {
-  margin-top: 20px;
+  padding-bottom: 60px;
 
-  @include media_interval(0, $media_mobile) {
-    margin: 0;
+  @include media_interval(0, $media_laptop) {
+    padding-bottom: 40px;
   }
 
   &__wrapper {
@@ -90,7 +90,7 @@
     }
 
     @include media_interval($media_mobile-extra-small, $media_mobile) {
-      justify-content: space-between;
+      justify-content: space-around;
     }
 
     @include media_interval(0, $media_mobile-extra-small) {
@@ -139,23 +139,20 @@
   }
 
   &__button {
-    height: 100px;
     display: flex;
-    align-items: center;
-    margin: 0 0 40px 5px;
+    align-items: start;
 
     @include media_interval(0, $media_mobile) {
-      justify-content: center;
+      justify-content: space-around;
       flex-wrap: wrap;
-      margin: 0 0 80px 5px;
     }
 
     &-catalog {
-      margin: 20px;
+      margin: 0 20px 20px 0;
 
-      // @include media_interval(0, $media_mobile) {
-      //   margin: 0 0 20px;
-      // }
+      @include media_interval(0, $media_mobile) {
+        margin: 0 0 20px;
+      }
     }
   }
 

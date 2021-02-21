@@ -93,9 +93,24 @@ input::placeholder {
   &_two {
     font-size: 42px;
     line-height: 46px;
-    font-weight: 400;
+    font-weight: 500;
     color: $c_black-3;
     margin: 0;
+
+    @include media_interval($media_laptop, $media_laptop-big) {
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    @include media_interval($media_tablet, $media_laptop) {
+      font-size: 28px;
+      line-height: 30px;
+    }
+
+    @include media_interval(0, $media_tablet) {
+      font-size: 28px;
+      line-height: 32px;
+    }
   }
 }
 
@@ -205,7 +220,7 @@ h3 {
 }
 
 .background-img {
-  height: 100vh;
+  height: 100%;
   animation: bgFadeIn 1s ease-in both;
   position: relative;
   text-align: center;

@@ -39,8 +39,11 @@
 
   &__block {
     position: relative;
-    margin-right: 7px;
     transition: $tr_duration $tr_easing;
+
+    &-litle {
+      margin-right: 7px;
+    }
 
     &-title {
       font-style: normal;
