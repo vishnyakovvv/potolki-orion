@@ -16,6 +16,7 @@
   &__wrapper {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     @include media_interval($media_mobile, $media_tablet) {
       flex-direction: column;
@@ -47,7 +48,7 @@
     }
 
     @include media_interval(0, $media_tablet) {
-      margin: 10px 0;
+      margin: 10px 0 0;
     }
   }
 
@@ -86,10 +87,6 @@
 
     &--TOP {
       margin: 10px 0;
-
-      @include media_interval(0, $media_tablet) {
-        margin: 0 0 10px;
-      }
     }
 
     &--BOTTOM {
