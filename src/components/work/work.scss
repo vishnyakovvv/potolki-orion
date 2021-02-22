@@ -6,6 +6,14 @@
   position: relative;
   padding: 60px 0;
 
+  @include media_interval($media_mobile, $media_tablet) {
+    padding: 40px 0;
+  }
+
+  @include media_interval(0, $media_mobile) {
+    padding: 30px 0;
+  }
+
   &::before {
     background: url(/static/images/hammer-drill.png);
     background-position: right;
@@ -18,6 +26,10 @@
     top: 0;
     opacity: 0.1;
     z-index: -1;
+
+    @include media_interval(0, $media_tablet) {
+      background: none;
+    }
   }
 
   &__top {
@@ -25,14 +37,34 @@
     align-items: flex-end;
     margin-bottom: 40px;
 
+    @include media_interval(0, $media_mobile) {
+      align-items: center;
+      margin-bottom: 0;
+    }
+
     &-text {
       width: 160px;
       margin-bottom: 4px;
+
+      @include media_interval(0, $media_mobile) {
+        display: none;
+      }
     }
   }
 
   &__title {
     width: 385px;
+
+    @include media_interval($media_mobile, $media_laptop) {
+      width: 300px;
+      margin: 0 30px 0 0;
+    }
+
+    @include media_interval(0, $media_mobile) {
+      width: 260px;
+      text-align: center;
+      margin: 0 auto 20px;
+    }
   }
 
   &__top-block {
@@ -79,6 +111,11 @@ small {
   color: #999;
   position: relative;
   padding-left: 3em;
+  font-size: 80%;
+
+  @include media_interval(0, $media_laptop) {
+    font-size: 70%;
+  }
 
   &:after {
     content: "";
@@ -100,6 +137,11 @@ small {
   .two--col {
     display: flex;
     align-items: center;
+
+    @include media_interval(0, $media_mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 }
 
@@ -107,14 +149,32 @@ figure {
   margin: 0;
 }
 .is-item {
-  width: 40%;
+  // width: 40%;
+
+  &--list {
+    margin: 10px 0;
+
+    @include media_interval(0, $media_mobile) {
+      display: none;
+    }
+  }
+
   &.has--img {
     width: 60%;
+
+    @include media_interval(0, $media_mobile) {
+      width: 100%;
+    }
   }
   &--title {
     color: #343434;
     margin: 0;
-    font-size: 2em;
+    font-size: 32px;
+    width: 250px;
+
+    @include media_interval(0, $media_laptop) {
+      font-size: 20px;
+    }
   }
   &--item {
     margin-left: 16px;
@@ -126,6 +186,24 @@ figure {
     display: block;
     font-size: 28px;
     font-weight: bold;
+
+    @include media_interval($media_mobile, $media_laptop) {
+      font-size: 20px;
+    }
+
+    @include media_interval(0, $media_mobile) {
+      display: none;
+    }
+  }
+
+  &--price {
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+
+    @include media_interval(0, $media_laptop) {
+      font-size: 20px;
+    }
   }
 }
 .the-img {
@@ -139,6 +217,14 @@ figure {
 
 .is-item--inner {
   padding: 0em 3em;
+
+  @include media_interval(0, $media_laptop) {
+    padding: 0em 1.5em;
+  }
+
+  @include media_interval(0, $media_mobile) {
+    padding: 0;
+  }
 }
 
 .is-item--hr {
@@ -146,6 +232,16 @@ figure {
   height: 4px;
   background: $c_gray;
   border: none;
+}
+
+.flickity-prev-next-button {
+  @include media_interval($media_mobile-extra-small, $media_mobile) {
+    top: 33%;
+  }
+
+  @include media_interval(0, $media_mobile-extra-small) {
+    top: 30%;
+  }
 }
 
 // transitions

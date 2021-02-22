@@ -48,6 +48,7 @@
 
     @include media_interval(0, $media_mobile) {
       width: auto;
+      margin-bottom: 20px;
     }
   }
 
@@ -137,6 +138,10 @@
       flex-flow: column;
       text-align: center;
       transition: all $tr_duration $tr_easing;
+
+      @include media_interval(0, $media_mobile-extra-small) {
+        width: 100%;
+      }
 
       &:hover {
         opacity: 1;

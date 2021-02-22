@@ -28,8 +28,9 @@
       // options
       imagesLoaded: true,
       wrapAround: true,
-      autoPlay: true,
-      pauseAutoPlayOnHover: false
+      autoPlay: 3000,
+      pauseAutoPlayOnHover: true,
+      pageDots: false
     });
   })();
   
