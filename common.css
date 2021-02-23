@@ -235,8 +235,7 @@ h3 {
   text-align: center;
 }
 .background-img::after {
-  background: url(static/images/IMG_2995.jpg) center center/cover no-repeat
-    fixed;
+  background: url(static/images/IMG_2995.) center center/cover no-repeat fixed;
   bottom: 0;
   content: " ";
   left: 0;
