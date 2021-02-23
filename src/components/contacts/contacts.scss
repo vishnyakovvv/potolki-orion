@@ -3,16 +3,33 @@
 @import "../mixins";
 
 .contacts {
-  padding: 0 0 60px;
+  padding: 60px 0;
+
+  @include media_interval($media_mobile, $media_tablet) {
+    padding: 40px 0;
+  }
+
+  @include media_interval(0, $media_mobile) {
+    padding: 30px 0;
+  }
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
+
+    @include media_interval(0, $media_tablet) {
+      flex-direction: column;
+    }
   }
 
   &__inner {
     position: relative;
-    width: 100%;
+    width: 60%;
+
+    @include media_interval(0, $media_tablet) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
 
     &-box {
       display: flex;
@@ -25,8 +42,12 @@
     }
 
     &-text {
-      width: 90%;
+      width: 100%;
       margin-top: 15px;
+
+      @include media_interval(0, $media_tablet) {
+        margin-top: 5px;
+      }
 
       &--ADDRESS {
         font-style: normal;
@@ -34,6 +55,10 @@
         font-size: 22px;
         line-height: 33px;
         margin-bottom: 15px;
+
+        @include media_interval(0, $media_tablet) {
+          margin-bottom: 0;
+        }
       }
 
       &--PHONE {
@@ -59,6 +84,10 @@
       transition: all $tr_duration $tr_easing;
       color: $c_gray--dark-extra;
 
+      @include media_interval(0, $media_tablet) {
+        margin: 10px 0;
+      }
+
       &:hover {
         color: $c_black;
       }
@@ -83,6 +112,10 @@
 
   &__title {
     margin-bottom: 20px;
+
+    @include media_interval(0, $media_tablet) {
+      margin-bottom: 10px;
+    }
   }
 
   &__map {
@@ -94,18 +127,36 @@
   }
 
   &__form {
+    width: 40%;
     display: flex;
     flex-direction: column;
-    padding: 45px 35px 25px;
+    padding: 25px;
     background-color: $c_white-2;
     border-radius: 1px;
     color: $c_black-3;
     box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.45);
+    box-sizing: border-box;
+    margin-left: 20px;
+
+    @include media_interval($media_tablet, $media_laptop) {
+      padding: 20px;
+    }
+
+    @include media_interval(0, $media_tablet) {
+      width: 100%;
+      margin-left: 0;
+    }
 
     &-top {
       display: flex;
       align-items: center;
       margin-bottom: 53px;
+
+      &--VL {
+        border-left: 3px solid #999999;
+        height: 100%;
+        margin-right: 10px;
+      }
     }
 
     &-title {
@@ -113,8 +164,12 @@
       font-weight: 500;
       font-size: 36px;
       line-height: 34px;
-      width: 190px;
       margin-right: 22px;
+
+      @include media_interval($media_tablet, $media_laptop) {
+        font-size: 32px;
+        line-height: 32px;
+      }
     }
 
     &-br {
@@ -126,7 +181,11 @@
       font-weight: 400;
       font-size: 24px;
       line-height: 23px;
-      width: 270px;
+
+      @include media_interval($media_tablet, $media_laptop) {
+        font-size: 20px;
+        line-height: 22px;
+      }
     }
 
     &-lable {
