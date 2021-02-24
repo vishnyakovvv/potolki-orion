@@ -35,9 +35,17 @@
       display: flex;
       width: 100%;
 
+      @include media_interval(0, $media_mobile) {
+text-align: center;
+      }
+
       &--VL {
         border-left: 3px solid #999999;
         margin-right: 17px;
+
+        @include media_interval(0, $media_mobile) {
+          display: none;;
+        }
       }
     }
 
@@ -45,7 +53,7 @@
       width: 100%;
       margin-top: 15px;
 
-      @include media_interval(0, $media_tablet) {
+      @include media_interval(0, $media_mobile) {
         margin-top: 5px;
       }
 
@@ -53,11 +61,11 @@
         font-style: normal;
         font-weight: 500;
         font-size: 22px;
-        line-height: 33px;
         margin-bottom: 15px;
 
-        @include media_interval(0, $media_tablet) {
+        @include media_interval(0, $media_mobile) {
           margin-bottom: 0;
+          font-size: 20px;
         }
       }
 
@@ -65,7 +73,6 @@
         font-style: normal;
         font-weight: 500;
         font-size: 24px;
-        line-height: 36px;
         color: $c_black;
       }
 
@@ -84,8 +91,9 @@
       transition: all $tr_duration $tr_easing;
       color: $c_gray--dark-extra;
 
-      @include media_interval(0, $media_tablet) {
+      @include media_interval(0, $media_mobile) {
         margin: 10px 0;
+        flex-direction: column-reverse;
       }
 
       &:hover {
@@ -106,6 +114,10 @@
         font-weight: 500;
         margin-left: 20px;
         width: 250px;
+
+        @include media_interval(0, $media_mobile) {
+          margin: 0 0 10px 0;
+        }
       }
     }
   }
@@ -113,8 +125,12 @@
   &__title {
     margin-bottom: 20px;
 
-    @include media_interval(0, $media_tablet) {
+    @include media_interval(0, $media_laptop) {
       margin-bottom: 10px;
+    }
+
+    @include media_interval(0, $media_mobile) {
+      text-align: center;
     }
   }
 
@@ -142,15 +158,30 @@
       padding: 20px;
     }
 
-    @include media_interval(0, $media_tablet) {
+    @include media_interval($media_mobile, $media_tablet) {
       width: 100%;
       margin-left: 0;
+    }
+
+    @include media_interval(0, $media_mobile) {
+      width: 100%;
+      margin-left: 0;
+      text-align: center;
     }
 
     &-top {
       display: flex;
       align-items: center;
       margin-bottom: 53px;
+
+      @include media_interval($media_mobile, $media_tablet) {
+        margin-bottom: 15px;
+        align-items: flex-end;
+      }
+      @include media_interval(0, $media_mobile) {
+        flex-direction: column;
+        margin-bottom: 15px;
+      }
 
       &--VL {
         border-left: 3px solid #999999;
@@ -166,9 +197,13 @@
       line-height: 34px;
       margin-right: 22px;
 
-      @include media_interval($media_tablet, $media_laptop) {
-        font-size: 32px;
-        line-height: 32px;
+      @include media_interval(0, $media_laptop) {
+        font-size: 28px;
+        line-height: 28px;
+      }
+
+      @include media_interval(0, $media_mobile) {
+        margin: 0;
       }
     }
 
@@ -182,9 +217,14 @@
       font-size: 24px;
       line-height: 23px;
 
-      @include media_interval($media_tablet, $media_laptop) {
-        font-size: 20px;
-        line-height: 22px;
+      @include media_interval($media_mobile-extra-small, $media_laptop) {
+        font-size: 17px;
+        line-height: 19px;
+      }
+
+      @include media_interval(0,$media_mobile-extra-small) {
+        font-size: 16px;
+        line-height: 16px;
       }
     }
 
@@ -199,7 +239,16 @@
       font-size: 24px;
       line-height: 23px;
       margin-bottom: 30px;
+
+      @include media_interval($media_mobile, $media_tablet) {
+       margin-bottom: 10px;
+      }
+
+      @include media_interval(0, $media_mobile) {
+        margin-bottom: 10px;
+      }
     }
+
 
     &-input {
       background-color: transparent;
@@ -225,6 +274,14 @@
       align-self: center;
       height: 75px;
       margin-top: 50px;
+
+      @include media_interval($media_mobile, $media_tablet) {
+       margin-top: 20px;
+      }
+
+      @include media_interval(0, $media_mobile) {
+        margin-top: 10px;
+      }
     }
   }
 }

@@ -20,6 +20,7 @@
 
     @include media_interval($media_mobile, $media_tablet) {
       flex-direction: column;
+      align-items: flex-start;
     }
 
     @include media_interval(0, $media_mobile) {

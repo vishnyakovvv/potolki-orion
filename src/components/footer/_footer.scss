@@ -11,11 +11,32 @@
     justify-content: space-between;
     align-items: center;
     color: $c_white-2;
+
+    @include media_interval(0, $media_laptop) {
+      padding: 40px 0;
+    }
+  
+    @include media_interval(0, $media_mobile) {
+      padding: 30px 0;
+      flex-direction: column;
+    }
   }
 
   &__title {
     font-family: "Josefin Sans", sans-serif;
     color: $c_red-2;
+
+    @include media_interval($media_mobile, $media_laptop) {
+      font-size: 42px;
+      margin-right: 25px;
+      line-height: unset;
+    }
+
+    @include media_interval(0, $media_mobile) {
+      font-size: 42px;
+      margin-right: 0;
+      line-height: unset;
+    }
 
     &::after {
       display: block;
@@ -27,12 +48,43 @@
     }
   }
 
+  &__text {
+    display: flex;
+    align-items: center;
+
+    @include media_interval($media_mobile, $media_tablet) {
+      flex-direction: column;
+      align-items: start;
+    }
+
+    @include media_interval(0, $media_mobile) {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 5px;
+    }
+  }
+
   &__info {
     font-style: normal;
     font-weight: 300;
     font-size: 12px;
     line-height: 19px;
     width: 245px;
+
+    @include media_interval($media_tablet, $media_laptop) {
+      line-height: 14px;
+    }
+
+    @include media_interval($media_mobile, $media_tablet) {
+      font-size: 9px;
+      line-height: unset;
+    }
+
+    @include media_interval(0, $media_mobile) {
+      font-size: 9px;
+      line-height: unset;
+      text-align: center;
+    }
   }
 
   &__contacts {
@@ -40,7 +92,25 @@
     font-weight: 300;
     font-size: 12px;
     line-height: 19px;
-    width: 200px;
+    width: 150px;
+    margin-right: 20px;
+
+    @include media_interval($media_tablet, $media_laptop) {
+      line-height: 14px;
+    }
+
+    @include media_interval($media_mobile, $media_tablet) {
+      font-size: 9px;
+      line-height: unset;
+      margin: 0 0 5px;
+    }
+
+    @include media_interval(0, $media_mobile) {
+      font-size: 9px;
+      line-height: unset;
+      text-align: center;
+      margin: 0 0 5px;
+    }
   }
 
   &__social {
@@ -50,8 +120,26 @@
       margin: 0 10px;
       transition: opacity $tr_duration $tr_easing;
 
+      @include media_interval(0, $media_laptop) {
+        margin: 0 5px;
+      }
+
       &:hover {
         opacity: 0.5;
+      }
+    }
+
+    &-link {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    &-img {
+      width: 100%;
+
+      @include media_interval(0, $media_tablet) {
+        width: 45px;
       }
     }
   }

@@ -37,7 +37,7 @@
 
   &__title-text {
     text-align: start;
-    line-height: 61px;
+    line-height: 56px;
 
     @include media_interval(0, $media_mobile) {
       text-align: center;
@@ -46,11 +46,11 @@
 
     @include media_interval($media_mobile-extra-small, $media_mobile-small) {
       font-size: 44px;
-      line-height: 52px;
+      line-height: 48px;
     }
     @include media_interval(0, $media_mobile-extra-small) {
       font-size: 36px;
-      line-height: 47px;
+      line-height: 42px;
     }
   }
 
