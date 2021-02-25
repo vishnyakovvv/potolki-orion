@@ -2,20 +2,40 @@
 @import "../vars.scss";
 @import "../mixins.scss";
 
+.overlay {
+   
+  /* Скрываем подложку  */
+  opacity: 0;
+  visibility: hidden;
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 20;
+  transition: .3s all;
+
+  &:active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 .callback {
-  // position: fixed;
-  // top: 0;
-  // bottom: 0;
-  // left: 0;
-  // right: 0;
 
-  // background-color: rgba(0, 0, 0, 0.6);
-
-  // z-index: 111;
 
   &__modal {
     opacity: 0;
     visibility: hidden;
+
+    &:active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+
   }
 
   &__form {
@@ -177,47 +197,28 @@
   }
 }
 
-.callback {
-  display: none;
+// .callback {
+//   display: none;
 
-  &_open {
-    display: flex;
+//   &_open {
+//     display: flex;
 
-    animation: animate 0.3s;
+//     animation: animate 0.3s;
 
-    @keyframes animate {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
+//     @keyframes animate {
+//       from {
+//         opacity: 0;
+//       }
+//       to {
+//         opacity: 1;
+//       }
+//     }
 
-    @include media_interval(0, $media_mobile-medium) {
-      padding: 0 20px;
-    }
-  }
-}
+//     @include media_interval(0, $media_mobile-medium) {
+//       padding: 0 20px;
+//     }
+//   }
+// }
 
-.overlay {
-   
-  /* Скрываем подложку  */
-  opacity: 0;
-  visibility: hidden;
-  
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, .5);
-  z-index: 20;
-  transition: .3s all;
-}
 
-.modal.active,
-.overlay.active{
-   opacity: 1;
-   visibility: visible;
-}
+
