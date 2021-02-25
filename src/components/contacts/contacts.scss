@@ -36,7 +36,7 @@
       width: 100%;
 
       @include media_interval(0, $media_mobile) {
-text-align: center;
+        text-align: center;
       }
 
       &--VL {
@@ -44,7 +44,7 @@ text-align: center;
         margin-right: 17px;
 
         @include media_interval(0, $media_mobile) {
-          display: none;;
+          display: none;
         }
       }
     }
@@ -151,13 +151,13 @@ text-align: center;
     border-radius: 1px;
     color: $c_black-3;
     box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.45);
-    box-sizing: border-box;
+    // box-sizing: border-box;
     margin-left: 20px;
 
     @include media_interval($media_tablet, $media_laptop) {
       padding: 20px;
     }
- 
+
     @include media_interval($media_mobile, $media_tablet) {
       width: 100%;
       margin-left: 0;
@@ -222,7 +222,7 @@ text-align: center;
         line-height: 19px;
       }
 
-      @include media_interval(0,$media_mobile-extra-small) {
+      @include media_interval(0, $media_mobile-extra-small) {
         font-size: 16px;
         line-height: 16px;
       }
@@ -241,14 +241,13 @@ text-align: center;
       margin-bottom: 30px;
 
       @include media_interval($media_mobile, $media_tablet) {
-       margin-bottom: 10px;
+        margin-bottom: 10px;
       }
 
       @include media_interval(0, $media_mobile) {
         margin-bottom: 10px;
       }
     }
-
 
     &-input {
       background-color: transparent;
@@ -276,7 +275,7 @@ text-align: center;
       margin-top: 50px;
 
       @include media_interval($media_mobile, $media_tablet) {
-       margin-top: 20px;
+        margin-top: 20px;
       }
 
       @include media_interval(0, $media_mobile) {
