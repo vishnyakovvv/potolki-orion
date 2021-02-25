@@ -121,5 +121,28 @@
         display: none;
       }
     }
+
+    &-link {
+      background-color: $c_gray--dark-extra;
+      transition: background-color $tr_duration $tr_easing;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      padding: 7px 20px;
+      border-radius: 2px;
+
+      &:hover {
+        background-color: $c_black;
+      }
+  
+      &:active {
+        box-shadow: none;
+      }
+    }
+
+    &-name {
+      font-style: normal;
+      font-weight: 500;
+      color: #f2f2f2;
+      text-align: center;
+    }
   }
 }
