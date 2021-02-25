@@ -1,4 +1,6 @@
-  // open tabs
+!function(e){"function"!=typeof e.matches&&(e.matches=e.msMatchesSelector||e.mozMatchesSelector||e.webkitMatchesSelector||function(e){for(var t=this,o=(t.document||t.ownerDocument).querySelectorAll(e),n=0;o[n]&&o[n]!==t;)++n;return Boolean(o[n])}),"function"!=typeof e.closest&&(e.closest=function(e){for(var t=this;t&&1===t.nodeType;){if(t.matches(e))return t;t=t.parentNode}return null})}(window.Element.prototype);
+
+// open tabs
 
   (function tabs () {
     let jsTriggers = document.querySelectorAll('.js-tab-trigger');
@@ -38,39 +40,73 @@
 
   // window open
 
-  (function windowOpen() {
-    let callback = document.querySelector(".callback-modal_js"),
-        buttonOpen = document.querySelector(".callback-open_js"),
-        buttonClose = document.querySelector(".callback-close_js"),
-        inputText = document.querySelector(".input-text-callback_js");
+//   (function windowOpen() {
+//     let callback = document.querySelector(".callback-modal_js"),
+//         buttonOpen = document.querySelector(".callback-open_js"),
+//         buttonClose = document.querySelector(".callback-close_js"),
+//         inputText = document.querySelector(".input-text-callback_js");
 
 
-    buttonOpen.addEventListener("click", openCallbackPopup);
+//     buttonOpen.addEventListener("click", openCallbackPopup);
 
-    function openCallbackPopup() {
+//     function openCallbackPopup() {
 
 
-        callback.classList.add("callback_open");
-        inputText.focus();
+//         callback.classList.add("callback_open");
+//         inputText.focus();
 
-        buttonClose.addEventListener("click", closeCallbackPopup);
+//         buttonClose.addEventListener("click", closeCallbackPopup);
 
-        window.addEventListener("keydown", function (event) {
-            if (event.code === "Escape") {
-                closeCallbackPopup()
-            }
+//         window.addEventListener("keydown", function (event) {
+//             if (event.code === "Escape") {
+//                 closeCallbackPopup()
+//             } 
+//         });
+
+//         callback.addEventListener("click", function (event) {
+//             if (event.target === callback) {
+//                 closeCallbackPopup()
+//             }
+//         });
+//     }
+
+//     function closeCallbackPopup() {
+//         callback.classList.remove("callback_open");
+//         buttonClose.removeEventListener("click", closeCallbackPopup);
+//     }
+// })();
+
+document.addEventListener('DOMContentLoaded', function() {
+
+  let modalButtons = document.querySelectorAll('.js-open-modal'),
+      overlay = document.querySelector('.js-overlay-modal'),
+      closeButtons = document.querySelectorAll('.js-modal-close');
+
+      modalButtons.forEach(function(item){
+        item.addEventListener('click', function(e) {
+
+          e.preventDefault();
+
+          let modalId = this.getAttribute('data-modal');
+              modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
+
+          modalElem.classList.add('active');
+          overlay.classList.add('active');
         });
 
-        callback.addEventListener("click", function (event) {
-            if (event.target === callback) {
-                closeCallbackPopup()
-            }
-        });
-    }
+      });
 
-    function closeCallbackPopup() {
-        callback.classList.remove("callback_open");
-        buttonClose.removeEventListener("click", closeCallbackPopup);
-    }
-})();
+      closeButtons.forEach(function(item){
+        item.addEventListener('click', function(e) {
+          let parentModal = this.closest('.callback__modal');
+
+          parentModal.classList.remove('active');
+          overlay.classList.remove('active');
+        });
+      });
+
+
+
+
+})
   

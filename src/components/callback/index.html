@@ -1,29 +1,30 @@
 <section class="callback callback-modal_js">
-    <form class="callback__form" action="/" name="callbackForm" autocomplete="off">
-        <div class="callback__form-top">
-            <h3 class="callback__form-title">Оставьте заявку</h3>
-            <svg class="callback__form-br" width="4" height="53" viewBox="0 0 4 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="4" height="53" fill="#333333" />
-            </svg>
-            <p class="callback__form-time">Мы свяжемся с вами в течении 15 мин</p>
-        </div>
-        <label class="callback__form-lable">
-            <span class="callback__form-text">Ваше имя</span>
-            <input class="callback__form-input input-text-callback_js" type="text" name="name" placeholder="Иван" autocomplete="off">
-        </label>
-        <hr class="callback__form-hr">
-        <label class="callback__form-phone-input callback__form-lable">
-            <span class="callback__form-text">Ваш телефон</span>
-            <input class="callback__form-input" type="tel" name="phone" placeholder="8 999 999 99 99" autocomplete="off">
-        </label>
-        <hr class="callback__form-hr">
-        <div class="callback__form-bottom">
-            <div class="button">
-                <button class="button_background">
-                    <span class="button_background-name">Заказать</span>
-                </button>
+    <div class="callback__modal" data-modal="1">
+        <form class="callback__form" action="/" name="callbackForm" autocomplete="off">
+            <div class="callback__form-top">
+                <h3 class="callback__form-title">Оставьте заявку</h3>
+                <div class="callback__form-top--VL"></div>
+                <p class="callback__form-time">Мы свяжемся с вами в течении 15 мин</p>
+            </div> 
+            <label class="callback__form-lable">
+                <span class="callback__form-text">Ваше имя</span>
+                <input class="callback__form-input input-text-callback_js" type="text" name="name" placeholder="Иван" autocomplete="off">
+            </label>
+            <hr class="callback__form-hr">
+            <label class="callback__form-phone-input callback__form-lable">
+                <span class="callback__form-text">Ваш телефон</span>
+                <input class="callback__form-input" type="tel" name="phone" placeholder="8 999 999 99 99" autocomplete="off">
+            </label>
+            <hr class="callback__form-hr">
+            <div class="callback__form-bottom">
+                <div class="button">
+                    <button class="button_background">
+                        <span class="button_background-name">Заказать</span>
+                    </button>
+                </div>
+                <button class="callback__form-close callback-close_js" type="button" aria-label="exit"></button>
             </div>
-            <button class="callback__form-close callback-close_js" type="button" aria-label="exit"></button>
-        </div>
-    </form>
+        </form>
+    </div>
+    <div class="overlay" id="js-overlay-modal"></div>
 </section>

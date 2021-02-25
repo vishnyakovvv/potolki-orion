@@ -157,7 +157,7 @@ text-align: center;
     @include media_interval($media_tablet, $media_laptop) {
       padding: 20px;
     }
-
+ 
     @include media_interval($media_mobile, $media_tablet) {
       width: 100%;
       margin-left: 0;
