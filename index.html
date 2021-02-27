@@ -137,12 +137,12 @@
                     </div>
                     <div class="box-info__img">
                         <picture class="box-info__picture">
-                            <source srcset="static/images/box-info.jpg, static/images/box-info_2x.jpg 2x" media="(min-width: 1400px)">
-                            <source srcset="static/images/box-info_desktop.jpg, static/images/box-info_desktop_2x.jpg 2x" media="(min-width: 1200px) and (max-width: 1400px)">
-                            <source srcset="static/images/box-info_laptop.jpg, static/images/box-info_laptop_2x.jpg 2x" media="(min-width: 1024px) and (max-width: 1199px)">
-                            <source srcset="static/images/box-info_tablet.jpg, static/images/box-info_tablet_2x.jpg 2x" media="(max-width: 1023px)">
+                            <source srcset="static/images/box-info.JPG, static/images/box-info_2x.JPG 2x" media="(min-width: 1400px)">
+                            <source srcset="static/images/box-info_desktop.JPG, static/images/box-info_desktop_2x.JPG 2x" media="(min-width: 1200px) and (max-width: 1400px)">
+                            <source srcset="static/images/box-info_laptop.JPG, static/images/box-info_laptop_2x.JPG 2x" media="(min-width: 1024px) and (max-width: 1199px)">
+                            <source srcset="static/images/box-info_tablet.JPG, static/images/box-info_tablet_2x.JPG 2x" media="(max-width: 1023px)">
                             <!-- <source srcset="static/images/portfolio-1_mobile.png" media="(max-width: 767px)">  -->
-                            <img class="box-info__img-wrapper" src="static/images/box-info.jpg" alt="фото натяжного потолка">
+                            <img class="box-info__img-wrapper" src="static/images/box-info.JPG" alt="фото натяжного потолка">
                         </picture>
                     </div>
                 </div>
@@ -659,7 +659,7 @@
                         <hr class="contacts__form-hr">
                         <div class="contacts__form-bottom">
                             <div class="button">
-                                <button class="button_background js-open-modal">
+                                <button class="button_background">
                                     <span class="button_background-name">Заказать</span>
                                 </button>
                             </div>
@@ -707,7 +707,7 @@
             </div>
         </div>
     </footer>
-    <section class="callback callback__modal" data-modal="1">
+    <section class="callback modal_js">
         <form class="callback__form" action="/" name="callbackForm" autocomplete="off">
             <div class="callback__form-top">
                 <h3 class="callback__form-title">Оставьте заявку</h3>
@@ -730,11 +730,38 @@
                         <span class="button_background-name">Заказать</span>
                     </button>
                 </div>
-                <button class="callback__form-close callback-close_js" type="button" aria-label="exit"></button>
+                <button class="callback__form-close js-modal-close" type="button" aria-label="exit"></button>
             </div>
         </form>
-        <div class="overlay" id="js-overlay-modal"></div>
     </section>
+    <button class="btn-top visually-hidden btn-top__js" title="Go to top">
+        <svg class="btn-top__svg" width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="11.25" y="50.75" width="39.5" height="39.5" rx="19.75" transform="rotate(-90 11.25 50.75)" fill="white" stroke="#070707" stroke-width="2.5" />
+            <rect x="19.3008" y="34.5786" width="16.5512" height="3" rx="1.5" transform="rotate(-45 19.3008 34.5786)" fill="#070707" />
+            <rect x="40.5801" y="36.7" width="16.5512" height="3" rx="1.5" transform="rotate(-135 40.5801 36.7)" fill="#070707" />
+        </svg>
+    </button>
+    <div class="mobile-menu">
+        <button class="mobile-menu__button-close button-close-menu_js">
+            <svg class="mobile-menu__svg" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3.37256" width="32" height="4" rx="2" transform="rotate(45 3.37256 0)" fill="#070707" />
+                <rect x="0.543945" y="22.6289" width="32" height="4" rx="2" transform="rotate(-45 0.543945 22.6289)" fill="#070707" />
+            </svg>
+        </button>
+        <nav class="mobile-menu__nav">
+            <ul class="mobile-menu__list">
+                <li class="mobile-menu__item">
+                    <a class="mobile-menu__item-link" href="/">Виды потолков</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a class="mobile-menu__item-link" href="/">Шоурум</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <button class="mobile-menu__item-link" type="button">Контакты</button>
+                </li>
+            </ul>
+        </nav>
+    </div>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="index.js"></script>
 </body>
