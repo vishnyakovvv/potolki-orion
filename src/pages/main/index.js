@@ -25,8 +25,8 @@
   // slider
 
   (function slider () {
-    var elem = document.querySelector('.slide--parent');
-    var slideEl = new Flickity( elem, {
+    let elem = document.querySelector('.slide--parent');
+    let slideEl = new Flickity( elem, {
       // options
       imagesLoaded: true,
       wrapAround: true,
@@ -41,7 +41,8 @@
   // window open
 
   (function windowOpen() {
-    let callback = document.querySelector(".modal_js"),
+    let body = document.querySelector("body"),
+        callback = document.querySelector(".modal_js"),
         buttonOpen = document.querySelectorAll(".js-open-modal"),
         buttonClose = document.querySelector(".js-modal-close"),
         inputText = document.querySelector(".input-text-callback_js");
@@ -53,6 +54,7 @@
   
   
           callback.classList.add("callback_open");
+          body.style.overflow = "hidden";
           inputText.focus();
   
           buttonClose.addEventListener("click", closeCallbackPopup);
@@ -74,6 +76,7 @@
 
     function closeCallbackPopup() {
         callback.classList.remove("callback_open");
+        body.style.overflow = "unset";
         buttonClose.removeEventListener("click", closeCallbackPopup);
     }
 })();
@@ -109,19 +112,56 @@
 // mobile-menu
 
 (function() {
-    let mobileMenu = document.querySelector(".mobile-menu"),
+    let body = document.querySelector("body"),
+        mobileMenu = document.querySelector(".mobile-menu"),
         buttonOpenMenu = document.querySelector(".button-open-menu_js"),
         buttonCloseMenu = document.querySelector(".button-close-menu_js"),
         mobileMenuFocus = document.querySelector(".mobile-menu-focus_js");
 
         buttonOpenMenu.addEventListener("click", () => {
             mobileMenu.classList.add("mobile-menu_open");
+            body.style.overflow = "hidden";
             mobileMenuFocus.focus();
         });
 
         buttonCloseMenu.addEventListener("click", () => {
             mobileMenu.classList.remove("mobile-menu_open");
+            body.style.overflow = "unset";
             mobileMenuFocus.focus();
         });
 })();
+
+// scroolTo
+
+  (function() {
+    let buttonCatalog = document.querySelector('.scroolToCatalog_js'),
+        buttonShowroom = document.querySelector('.scroolToShowroom_js'),
+        buttonContacts = document.querySelector('.scroolToContacts_js'),
+        catalog = document.querySelector('#catalog_js'),
+        showroom = document.querySelector('#showroom_js'),
+        contacts = document.querySelector('#contacts_js');
+
+        buttonShowroom.addEventListener('click', () => {
+          scrollTo(showroom);
+        });
+    
+        buttonCatalog.addEventListener('click', () => {
+          scrollTo(catalog);
+        });
+  
+        buttonContacts.addEventListener('click', () => {
+          scrollTo(contacts);
+        });
+
+    function scrollTo(element) {
+      window.scroll({
+        left: 0, 
+        top: element.offsetTop, 
+        behavior: 'smooth'
+      });
+    }
+  })();
+
+
+
 

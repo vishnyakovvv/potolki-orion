@@ -13,7 +13,17 @@
 
   text-align: right;
 
-  background-color: rgba($c_white, 0.95);
+  background-color: rgba($c_white, 0.98);
+
+  &__logo {
+    text-align: center;
+    margin-top: 30px;
+
+    @include media_interval($media_mobile, $media_tablet) {
+      text-align: start;
+      margin-left: 45px;
+    }
+  }
 
   &_open {
     display: block;
@@ -33,10 +43,10 @@
   &__button-close {
     border: none;
     background-color: initial;
-    margin: 112px 24px 60px 0;
+    margin: 27px 24px 30px 0;
 
     @include media_interval($media_mobile, $media_tablet) {
-      margin: 43px 43px 75px 0;
+      margin: -10px 43px 75px 0;
     }
   }
 
