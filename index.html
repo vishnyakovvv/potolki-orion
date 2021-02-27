@@ -33,22 +33,22 @@
                     <nav class="header__navigation">
                         <div class="header__box">
                             <div class="header__box-VL"></div>
-                            <a class="header__link" href="">ВИДЫ ПОТОЛКОВ</a>
+                            <button class="header__menu scroolToCatalog_js">ВИДЫ ПОТОЛКОВ</button>
                         </div>
                         <div class="header__box">
                             <div class="header__box-VL"></div>
-                            <a class="header__link" href="">ШОУРУМ</a>
+                            <button class="header__menu scroolToShowroom_js">ШОУРУМ</button>
                         </div>
                         <div class="header__box">
                             <div class="header__box-VL"></div>
-                            <a class="header__link" href="">КОНТАКТЫ</a>
+                            <button class="header__menu scroolToContacts_js">КОНТАКТЫ</button>
                         </div>
                     </nav>
                     <div class="header__contact">
                         <p class="header__contact-tel">+7 937 992 52 15</p>
                         <div class="button">
                             <a class="header__contact-link" href="tel:+79379925215">
-                                <span class="header__contact-name">Позвонить</span>
+                                <span class="header__contact-name">ПОЗВОНИТЬ</span>
                             </a>
                         </div>
                     </div>
@@ -141,7 +141,6 @@
                             <source srcset="static/images/box-info_desktop.jpg, static/images/box-info_desktop_2x.jpg 2x" media="(min-width: 1200px) and (max-width: 1400px)">
                             <source srcset="static/images/box-info_laptop.jpg, static/images/box-info_laptop_2x.jpg 2x" media="(min-width: 1024px) and (max-width: 1199px)">
                             <source srcset="static/images/box-info_tablet.jpg, static/images/box-info_tablet_2x.jpg 2x" media="(max-width: 1023px)">
-                            <!-- <source srcset="static/images/portfolio-1_mobile.png" media="(max-width: 767px)">  -->
                             <img class="box-info__img-wrapper" src="static/images/box-info.jpg" alt="фото натяжного потолка">
                         </picture>
                     </div>
@@ -170,7 +169,7 @@
                 </div>
             </div>
         </section>
-        <section class="catalog">
+        <section class="catalog" id="catalog_js">
             <div class="container">
                 <div class="catalog__top">
                     <h2 class="catalog__title title-block_two">КАТАЛОГ</h2>
@@ -507,8 +506,9 @@
                 </div>
             </div>
         </section>
-        <section class="showroom">
+        <section class="showroom" id="showroom_js">
             <div class="container">
+                <h2 class="visually-hidden">шоурум натяжных потолков в самаре</h2>
                 <div class="showroom__wrapper">
                     <section class="showroom__content">
                         <div class="showroom__inner">
@@ -527,6 +527,7 @@
                         </div>
                     </section>
                     <section class="showroom__gallery">
+                        <h2 class="visually-hidden">шоурум. галлерея фото</h2>
                         <div class="showroom__gallery-block showroom__gallery-block--ONE" data-lightbox="roadtrip">
                             <div class="showroom__gallery-block--WRAP">
                                 <img class="showroom__gallery-img" src="static/images/showroom_1.jpg" alt="">
@@ -622,7 +623,7 @@
                 </div>
             </div>
         </section>
-        <section class="contacts">
+        <section class="contacts" id="contacts_js">
             <div class="container">
                 <div class="contacts__wrapper">
                     <div class="contacts__inner">
@@ -741,7 +742,11 @@
             <rect x="40.5801" y="36.7" width="16.5512" height="3" rx="1.5" transform="rotate(-135 40.5801 36.7)" fill="#070707" />
         </svg>
     </button>
-    <div class="mobile-menu">
+    <section class="mobile-menu">
+        <h2 class="visually-hidden">мобильное меню</h2>
+        <div class="mobile-menu__logo">
+            <img class="mobile-menu__logo-img" src="static/images/logo_2.svg" alt="логотип компании Орион">
+        </div>
         <button class="mobile-menu__button-close button-close-menu_js">
             <svg class="mobile-menu__svg" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="3.37256" width="32" height="4" rx="2" transform="rotate(45 3.37256 0)" fill="#070707" />
@@ -761,7 +766,7 @@
                 </li>
             </ul>
         </nav>
-    </div>
+    </section>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="index.js"></script>
 </body>
