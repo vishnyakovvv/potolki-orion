@@ -134,23 +134,37 @@
 // scroolTo
 
   (function() {
-    let buttonCatalog = document.querySelector('.scroolToCatalog_js'),
-        buttonShowroom = document.querySelector('.scroolToShowroom_js'),
-        buttonContacts = document.querySelector('.scroolToContacts_js'),
+    let body = document.querySelector("body"),
+        mobileMenu = document.querySelector(".mobile-menu"),
+        buttonCatalog = document.querySelectorAll('.scroolToCatalog_js'),
+        buttonShowroom = document.querySelectorAll('.scroolToShowroom_js'),
+        buttonContacts = document.querySelectorAll('.scroolToContacts_js'),
         catalog = document.querySelector('#catalog_js'),
         showroom = document.querySelector('#showroom_js'),
         contacts = document.querySelector('#contacts_js');
 
-        buttonShowroom.addEventListener('click', () => {
-          scrollTo(showroom);
+        buttonCatalog.forEach (function (item) {
+          item.addEventListener('click', () => {
+            mobileMenu.classList.remove("mobile-menu_open");
+            body.style.overflow = "unset";
+            scrollTo(catalog);
+          });
         });
-    
-        buttonCatalog.addEventListener('click', () => {
-          scrollTo(catalog);
+
+        buttonShowroom.forEach (function (item) {
+          item.addEventListener('click', () => {
+            mobileMenu.classList.remove("mobile-menu_open");
+            body.style.overflow = "unset";
+            scrollTo(showroom);
+          });
         });
-  
-        buttonContacts.addEventListener('click', () => {
-          scrollTo(contacts);
+
+        buttonContacts.forEach (function (item) {
+          item.addEventListener('click', () => {
+            mobileMenu.classList.remove("mobile-menu_open");
+            body.style.overflow = "unset";
+            scrollTo(contacts);
+          });
         });
 
     function scrollTo(element) {
