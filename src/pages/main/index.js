@@ -52,7 +52,6 @@
 
       function openCallbackPopup() {
   
-  
           callback.classList.add("callback_open");
           body.style.overflow = "hidden";
           inputText.focus();
