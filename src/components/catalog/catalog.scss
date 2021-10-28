@@ -198,7 +198,6 @@
 
     &-img {
       margin-right: 60px;
-      box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.45);
 
       @include media_interval($media_laptop, $media_laptop-big) {
         margin-right: 30px;
@@ -260,24 +259,6 @@
 
       @include media_interval(0, $media_tablet) {
         position: unset;
-      }
-
-      &--TOP {
-        display: flex;
-        margin-bottom: 10px;
-
-        @include media_interval(0, $media_laptop) {
-          display: none;
-        }
-      }
-
-      &--TEXT {
-        font-style: normal;
-        font-weight: 300;
-        font-size: 18px;
-        line-height: 17px;
-        width: 110px;
-        margin-left: 10px;
       }
     }
 
